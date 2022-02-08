@@ -32,10 +32,48 @@
       </div>
     </div>
     <div>
-      <img src="images/background_front.png" alt="background" class="w-100" />
+      <img src="images/background_front.png" alt="background" class="w-100 h-100" />
     </div>
-    <div class="min-h-screen" data-color="bg-violet-400" v-observe-visibility="visibilityChanged"></div>
-    <div class="min-h-screen" data-color="bg-indigo-500" v-observe-visibility="visibilityChanged"></div>
+    <div
+      class="min-h-screen flex"
+      data-color="bg-violet-400"
+      v-observe-visibility="visibilityChanged"
+    >
+      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
+        <div class="mx-auto md:mr-0 md:ml-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
+          <img src="images/examples/01.jpg" alt="example NFT" class="rounded-3xl" />
+        </div>
+        <div class="mt-5 md:my-auto px-6 text-xl md:mr-auto xl:pr-36 xl:pl-6">
+          <span>Rice feed more than half of the world's population. We want to share our love to rice with the you.</span>
+          <h2
+            class="text-6xl text-center mt-3 md:text-left md:text-7xl font-black text-orange-300 md:-ml-20 uppercase"
+          >
+            Made By
+            <br />Rice Lover
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="min-h-screen flex"
+      data-color="bg-indigo-400"
+      v-observe-visibility="visibilityChanged"
+    >
+      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
+        <div class="mx-auto md:ml-0 md:mr-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
+          <img src="images/examples/01.jpg" alt="example NFT" class="rounded-3xl" />
+        </div>
+        <div class="mt-5 md:my-auto px-6 text-xl md:ml-auto md:-order-1 z-20 xl:pl-36 xl:pr-6">
+          <span>Always start with the community, building and respecting our community is the #1 thing of GohanGo!!. We believe together we can make the word a little bit different.</span>
+          <h2
+            class="text-6xl text-center mt-3 md:text-right md:text-7xl font-black text-orange-300 md:-mr-32 uppercase"
+          >
+            Community
+            <br />First
+          </h2>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
