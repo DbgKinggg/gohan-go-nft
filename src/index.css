@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "allthingpink";
+  src: url("./font/allthingspink.ttf") format("truetype");
+}
+
+body {
+  font-family: "allthingpink", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3em;
+}
