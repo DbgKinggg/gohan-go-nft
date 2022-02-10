@@ -37,9 +37,8 @@
     <div>
       <img src="images/background_front.png" alt="background" class="w-100 h-100" />
     </div>
-    <img src="images/bibimbap.png" alt="Bibimbap" class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2" />
     <div
-      class="h-2/3 flex relative"
+      class="h-2/3 flex relative mt-5 md:mt-32"
       data-color="bg-violet-400"
       v-observe-visibility="visibilityChanged"
     >
@@ -63,6 +62,7 @@
         </div>
       </div>
     </div>
+    <img src="images/bibimbap.png" alt="Bibimbap" class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2" />
     <div
       class="h-2/3 flex mt-12 md:mt-32"
       data-color="bg-indigo-400"
@@ -85,6 +85,33 @@
             Community
             <br />First
           </h2>
+        </div>
+      </div>
+    </div>
+    <img
+      src="images/hainanese_chicken.png"
+      alt="Hainanese Chicken"
+      class="w-28 mt-5 mr-10 mb-0 md:w-48 md:mr-2 ml-auto"
+    />
+    <div
+      class="h-2/3 flex mt-12 md:mt-32"
+      data-color="bg-blue-400"
+      v-observe-visibility="visibilityChanged"
+    >
+      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
+        <div class="mx-auto md:mr-0 md:ml-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
+          <img
+            src="images/examples/01.jpg"
+            alt="example NFT"
+            class="rounded-3xl hover:scale-105 transform transition"
+          />
+        </div>
+        <div class="mt-5 md:my-auto px-6 text-xl md:mr-auto xl:pr-36 xl:pl-6">
+          <span>We don't want to be yet another NFT project, we want to be "the" NFT project. We want to support</span>
+          <h2
+            class="text-6xl text-center mt-3 md:text-left md:text-7xl font-black text-orange-300 md:-ml-20 uppercase"
+            id="title-one-animation"
+          >Something Different</h2>
         </div>
       </div>
     </div>
