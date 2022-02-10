@@ -1,7 +1,7 @@
 <template>
     <Listbox v-model="selectedLanguage">
         <ListboxButton
-            class="relative w-28 py-3 pl-3 pr-10 text-left bg-white rounded-3xl shadow-md cursor-default focus:outline-none focus:ring-2 focus:ring-orange-300 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm"
+            class="relative w-28 py-3 pl-3 pr-10 text-sm md:text-base md:w-32 text-left shadow-md bg-white hover:bg-gray-200 active:bg-gray-300 rounded-3xl hover:-translate-y-0.5 transform transition focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:outline-none focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500"
         >
             <span class="block truncate">{{ selectedLanguage.name }}</span>
             <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
@@ -15,7 +15,7 @@
             leave-to-class="opacity-0"
         >
             <ListboxOptions
-                class="absolute w-lg py-1 mt-1 overflow-auto text-base bg-white rounded-3xl shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                class="absolute z-20 w-lg py-1 mt-1 overflow-auto text-base bg-white rounded-3xl shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
             >
                 <ListboxOption
                     v-slot="{ active, selected }"
