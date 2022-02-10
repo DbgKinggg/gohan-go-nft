@@ -4,14 +4,16 @@
             <div
                 class="w-32 py-5 border text-orange-300 rounded-2xl ml-4 uppercase flex flex-col items-center justify-center"
             >
-                <div class="text-3xl font-black">{{ step }}</div>
-                <div class="text-gray-200 text-sm">{{ title }}</div>
+                <div class="text-3xl font-black hover:scale-110 transform transition">{{ step }}</div>
+                <div class="text-gray-200 text-sm hover:scale-110 transform transition">{{ title }}</div>
             </div>
             <div class="h-full border-r-4 border-transparent" v-if="includeIndicator">
                 <div class="border-l-4 ml-4 h-full border-gray-300 border-dashed"></div>
             </div>
         </div>
-        <div class="flex-auto border rounded-2xl border-gray-300 mx-3">
+        <div
+            class="flex-auto border rounded-2xl shadow-md bg-sky-200 shadow-sky-400 border-gray-300 mx-3 transform transition-all duration-300 ease-in-out hover:bg-gray-100 hover:-translate-y-1 hover:scale-105"
+        >
             <div class="flex md:flex-row flex-col items-center">
                 <div class="flex-auto">
                     <div class="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-orange-300">

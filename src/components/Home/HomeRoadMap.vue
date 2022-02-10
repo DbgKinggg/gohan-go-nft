@@ -25,7 +25,7 @@
                     title="More"
                     headline="More and more to come"
                     :includeIndicator="false"
-                >Building the communitybsahjasdgjhagsjhdg</HomeRoadMapRight>
+                >Building the communitybsahjasdgjhagsjhdg. We will open source our project.</HomeRoadMapRight>
             </div>
         </section>
     </div>

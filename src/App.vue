@@ -3,7 +3,7 @@
     <!-- <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40 fixed top-1/2 left-1/2" /> -->
     <BaseHeader />
     <div
-      class="grid min-h-screen overflow-hidden m-0 p-0 relative"
+      class="grid min-h-screen overflow-hidden m-0 p-0"
       data-color="bg-purple-400"
       v-observe-visibility="visibilityChanged"
     >
@@ -116,6 +116,7 @@
       </div>
     </div>
     <HomeRoadMap @observe-visibility="visibilityChanged" />
+    <HomeFaq @observe-visibility="visibilityChanged" />
   </div>
 </template>
 
@@ -125,11 +126,13 @@ import BaseHeader from './components/Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import HomeRoadMap from './components/Home/HomeRoadMap.vue'
+import HomeFaq from './components/Home/HomeFaq.vue'
 
 export default {
   components: {
     BaseHeader,
-    HomeRoadMap
+    HomeRoadMap,
+    HomeFaq
   },
   setup() {
     const bgColour = ref('');
