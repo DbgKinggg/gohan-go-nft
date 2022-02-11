@@ -1,21 +1,21 @@
 <template>
     <div
-        class="grid min-h-screen overflow-hidden m-0 p-0"
+        class="grid min-h-screen overflow-hidden relative"
         data-color="bg-purple-400"
         v-observe-visibility="emitVisibility"
     >
         <img
             src="images/bento.png"
             alt="Angelfish"
-            class="absolute w-48 top-12 md:top-24 left-6 md:left-16"
+            class="absolute w-48 top-12 md:top-24 -left-16 md:left-16"
         />
         <img
             src="images/curry_rice.png"
             alt="Curry rice"
-            class="absolute w-48 bottom-12 md:bottom-24 right-6 md:right-16"
+            class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:right-16"
         />
         <img src="images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
-        <div class="m-auto max-w-6xl p-12 z-10">
+        <div class="mt-48 md:m-auto max-w-6xl p-12 z-10">
             <div class="flex flex-col md:flex-row">
                 <div class="mt-2 md:w-1/2 max-w-md flex flex-col justify-center">
                     <div
@@ -39,7 +39,7 @@
                         <BaseIconDiscord />
                     </div>
                 </div>
-                <div class="flex md:justify-end justify-center w-full md:w-1/2 mt-5">
+                <div class="flex md:justify-end justify-center w-full mt-5 md:w-1/2 md:my-auto">
                     <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40" />
                 </div>
             </div>

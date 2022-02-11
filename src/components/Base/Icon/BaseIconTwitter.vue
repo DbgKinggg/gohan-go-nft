@@ -1,10 +1,10 @@
 <template>
-    <a href="#">
+    <a href="https://twitter.com/GohanGoNFT" target="_blank" rel="”noopener”">
         <span
-            class="block bg-white transform hover:-translate-y-3 border-2 w-12 h-12 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl"
+            class="block bg-white transform hover:-translate-y-3 border-2 w-14 h-14 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl"
         >
             <svg
-                class="fill-current p-1"
+                class="fill-current p-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 410.155 410.155"
                 xml:space="preserve"

@@ -1,10 +1,10 @@
 <template>
-    <a href="#">
+    <a href="https://discord.gg/GSgmWYQUPD" target="_blank" rel="”noopener”">
         <span
-            class="block bg-white transform hover:-translate-y-3 border-2 w-12 h-12 rounded-full duration-500 text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white text-2xl"
+            class="block bg-white transform hover:-translate-y-3 border-2 w-14 h-14 rounded-full duration-500 text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white text-2xl"
         >
             <svg
-                class="fill-current p-1"
+                class="fill-current p-2"
                 viewBox="0 -28.5 256 256"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid"

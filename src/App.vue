@@ -56,6 +56,7 @@
     </HomePromoItem>
     <HomeRoadMap @observe-visibility="visibilityChanged" />
     <HomeFaq @observe-visibility="visibilityChanged" />
+    <HomeFooter />
   </div>
 </template>
 
@@ -68,6 +69,7 @@ import HomeRoadMap from './components/Home/HomeRoadMap.vue'
 import HomeFaq from './components/Home/HomeFaq.vue'
 import HomeMain from './components/Home/HomeMain.vue'
 import HomePromoItem from './components/Home/HomePromoItem.vue'
+import HomeFooter from './components/Home/HomeFooter.vue'
 
 export default {
   components: {
@@ -75,7 +77,8 @@ export default {
     HomeRoadMap,
     HomeFaq,
     HomeMain,
-    HomePromoItem
+    HomePromoItem,
+    HomeFooter
   },
   setup() {
     const bgColour = ref('');
