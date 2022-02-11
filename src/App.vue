@@ -1,11 +1,12 @@
 <template>
-  <div :class="[bgColour]" class="transition-color duration-1000 ease-in-out">
+  <div
+    :class="[bgColour]"
+    class="transition-color duration-1000 ease-in-out selection:bg-sky-600 selection:text-white"
+  >
     <!-- <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40 fixed top-1/2 left-1/2" /> -->
     <BaseHeader />
     <HomeMain @observe-visibility="visibilityChanged" />
-    <div>
-      <img src="images/background_front.png" alt="background" class="w-100 h-100" />
-    </div>
+    <img src="images/background_front.png" alt="background" class="w-100 h-100" />
     <HomePromoItem
       imageSrc="images/examples/01.jpg"
       :isRight="true"
@@ -21,7 +22,12 @@
         v-slot:description
       >Rice feed more than half of the world's population. We want to share our love to rice with the you.</template>
     </HomePromoItem>
-    <img src="images/bibimbap.png" alt="Bibimbap" class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2" />
+    <img
+      id="rice-example-1"
+      src="images/bibimbap.png"
+      alt="Bibimbap"
+      class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
+    />
     <HomePromoItem
       imageSrc="images/examples/01.jpg"
       :isRight="false"
@@ -39,6 +45,7 @@
     </HomePromoItem>
     <img
       src="images/hainanese_chicken.png"
+      id="rice-example-2"
       alt="Hainanese Chicken"
       class="w-28 mt-5 mr-10 mb-0 md:w-48 md:mr-2 ml-auto"
     />
@@ -54,6 +61,12 @@
         v-slot:description
       >We don't want to be yet another NFT project, we want to be "the" NFT project. We want to support.</template>
     </HomePromoItem>
+    <img
+      id="rice-example-3"
+      src="images/curry_rice.png"
+      alt="Curry rice"
+      class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
+    />
     <HomeRoadMap @observe-visibility="visibilityChanged" />
     <HomeFaq @observe-visibility="visibilityChanged" />
     <HomeFooter />
@@ -96,6 +109,34 @@ export default {
 
     gsap.registerPlugin(ScrollTrigger)
 
+    const titleAnimation = (selector) => {
+      gsap.from(
+        selector,
+        {
+          scrollTrigger: {
+            trigger: selector,
+            toggleActions: "restart pause resume pause",
+            start: "top bottom",
+          },
+          duration: 0.75, opacity: 0, y: 150, stagger: 0.25
+        }
+      )
+    }
+
+    const imageAnimation = (selector, goRight) => {
+      gsap.to(
+        selector,
+        {
+          scrollTrigger: {
+            trigger: selector,
+            start: "bottom center",
+            scrub: true,
+          },
+          x: goRight ? window.innerWidth : -window.innerWidth
+        }
+      )
+    }
+
     onMounted(() => {
       timeline.from(
         '.title-animation',
@@ -107,34 +148,15 @@ export default {
         { duration: 0.75, opacity: 0, y: 150, stagger: 0.25 }
       )
 
-      // gsap.tweenTo(
-      //   '.img-animation',
-      //   { duration: 0.75, }
-      // )
+      // === titles animation ===
+      titleAnimation('#title-one-animation')
+      titleAnimation('#title-two-animation')
+      titleAnimation('#title-three-animation')
 
-      gsap.from(
-        '#title-one-animation',
-        {
-          scrollTrigger: '#title-one-animation',
-          duration: 0.75, opacity: 0, y: 150, stagger: 0.25
-        }
-      )
-
-      gsap.from(
-        '#title-two-animation',
-        {
-          scrollTrigger: '#title-two-animation',
-          duration: 0.75, opacity: 0, y: 150, stagger: 0.25
-        }
-      )
-
-      gsap.from(
-        '#title-three-animation',
-        {
-          scrollTrigger: '#title-three-animation',
-          duration: 0.75, opacity: 0, y: 150, stagger: 0.25
-        }
-      )
+      // === images animation ===
+      imageAnimation('#rice-example-1', true)
+      imageAnimation('#rice-example-2', false)
+      imageAnimation('#rice-example-3', true)
     })
 
     return { visibilityChanged, bgColour }

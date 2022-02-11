@@ -7,12 +7,12 @@
         <img
             src="images/bento.png"
             alt="Angelfish"
-            class="absolute w-48 top-12 md:top-24 -left-16 md:left-16"
+            class="absolute w-48 top-12 md:top-24 -left-16 md:left-16 hover:animate-spin"
         />
         <img
             src="images/curry_rice.png"
             alt="Curry rice"
-            class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:right-16"
+            class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:right-16 z-10 hover:animate-spin"
         />
         <img src="images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
         <div class="mt-48 md:m-auto max-w-6xl p-12 z-10">

@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-24 md:mt-48 px-3" data-color="bg-sky-400" v-observe-visibility="emitVisibility">
+    <div class="mt-12 md:mt-24 px-3" data-color="bg-sky-400" v-observe-visibility="emitVisibility">
         <h2
             class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-indigo-900"
         >Roadmap</h2>
