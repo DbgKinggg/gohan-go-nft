@@ -1,0 +1,72 @@
+<template>
+    <div
+        class="grid min-h-screen overflow-hidden m-0 p-0"
+        data-color="bg-purple-400"
+        v-observe-visibility="emitVisibility"
+    >
+        <img
+            src="images/bento.png"
+            alt="Angelfish"
+            class="absolute w-48 top-12 md:top-24 left-6 md:left-16"
+        />
+        <img
+            src="images/curry_rice.png"
+            alt="Curry rice"
+            class="absolute w-48 bottom-12 md:bottom-24 right-6 md:right-16"
+        />
+        <img src="images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
+        <div class="m-auto max-w-6xl p-12 z-10">
+            <div class="flex flex-col md:flex-row">
+                <div class="mt-2 md:w-1/2 max-w-md flex flex-col justify-center">
+                    <div
+                        class="md:text-8xl text-6xl uppercase font-black text-indigo-900 title-animation"
+                    >GohanGo!!</div>
+                    <div
+                        class="text-xl mt-4 text-animation"
+                    >GohanGo!! is a programmatic generated NFT collection on the Solana blockchain. There will be 8,866 unique digital collectibles in total.</div>
+                    <div
+                        class="mt-3 md:mt-5 p-2 bg-indigo-800 shadow-md items-center text-indigo-100 rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
+                        role="alert"
+                    >
+                        <span
+                            class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+                        >New</span>
+                        <span class="font-semibold mr-2 text-left flex-auto">Coming Soon!</span>
+                        <ChevronRightIcon class="h-5 w-5" />
+                    </div>
+                    <div class="mt-5 flex justify-center space-x-5">
+                        <BaseIconTwitter />
+                        <BaseIconDiscord />
+                    </div>
+                </div>
+                <div class="flex md:justify-end justify-center w-full md:w-1/2 mt-5">
+                    <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40" />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { ChevronRightIcon } from '@heroicons/vue/solid'
+import BaseIconTwitter from '../Base/Icon/BaseIconTwitter.vue'
+import BaseIconDiscord from '../Base/Icon/BaseIconDiscord.vue'
+
+export default {
+    components: {
+        ChevronRightIcon,
+        BaseIconTwitter,
+        BaseIconDiscord,
+    },
+    setup(props, { emit }) {
+        const emitVisibility = (...args) => {
+            emit('observe-visibility', ...args)
+        }
+
+        return {
+            emitVisibility
+        }
+    },
+    emits: ['observe-visibility']
+}
+</script>

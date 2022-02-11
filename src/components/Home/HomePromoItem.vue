@@ -1,0 +1,73 @@
+
+<template>
+    <div
+        class="h-2/3 flex relative mt-5 md:mt-32"
+        :data-color="color"
+        v-observe-visibility="emitVisibility"
+    >
+        <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
+            <div
+                class="mx-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2"
+                :class="isRight ? rightImgClasses : leftImgClasses"
+            >
+                <img
+                    :src="imageSrc"
+                    alt="example NFT"
+                    class="rounded-3xl hover:scale-105 transform transition"
+                />
+            </div>
+            <div
+                class="mt-5 md:my-auto px-6 text-xl"
+                :class="isRight ? rightTextClasses : leftTextClasses"
+            >
+                <span>
+                    <slot name="description"></slot>
+                </span>
+                <h2
+                    class="text-6xl text-center mt-3 md:text-7xl font-black text-orange-300 uppercase"
+                    :class="isRight ? rightTitleClasses : leftTitleClasses"
+                    :id="titleId"
+                >
+                    <slot name="title"></slot>
+                </h2>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        imageSrc: String,
+        color: String,
+        isRight: {
+            type: Boolean,
+            default: true
+        },
+        titleId: String
+    },
+    setup(props, { emit }) {
+        const emitVisibility = (...args) => {
+            emit('observe-visibility', ...args)
+        }
+
+        const rightImgClasses = 'md:mr-0 md:ml-auto'
+        const leftImgClasses = 'md:ml-0 md:mr-auto'
+        const rightTextClasses = 'md:mr-auto xl:pr-36 xl:pl-6'
+        const leftTextClasses = 'md:ml-auto md:-order-1 xl:pl-36 xl:pr-6'
+        const rightTitleClasses = 'md:text-left md:-ml-20'
+        const leftTitleClasses = 'md:text-right md:-mr-32'
+
+        return {
+            emitVisibility,
+            rightImgClasses,
+            leftImgClasses,
+            rightTextClasses,
+            leftTextClasses,
+            rightTitleClasses,
+            leftTitleClasses
+        }
+    },
+    emits: ['observe-visibility']
+}
+</script>

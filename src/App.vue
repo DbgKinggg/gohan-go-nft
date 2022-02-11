@@ -2,119 +2,58 @@
   <div :class="[bgColour]" class="transition-color duration-1000 ease-in-out">
     <!-- <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40 fixed top-1/2 left-1/2" /> -->
     <BaseHeader />
-    <div
-      class="grid min-h-screen overflow-hidden m-0 p-0"
-      data-color="bg-purple-400"
-      v-observe-visibility="visibilityChanged"
-    >
-      <img
-        src="images/bento.png"
-        alt="Angelfish"
-        class="absolute w-48 top-12 md:top-24 left-6 md:left-16"
-      />
-      <img
-        src="images/curry_rice.png"
-        alt="Curry rice"
-        class="absolute w-48 bottom-12 md:bottom-24 right-6 md:right-16"
-      />
-      <img src="images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
-      <div class="m-auto max-w-6xl p-12 z-10">
-        <div class="flex flex-col md:flex-row">
-          <div class="mt-2 md:w-1/2 max-w-md flex flex-col justify-center">
-            <div
-              class="md:text-8xl text-6xl uppercase font-black text-indigo-900 title-animation"
-            >GohanGo!!</div>
-            <div
-              class="text-xl mt-4 text-animation"
-            >GohanGo!! is a programmatic generated NFT collection on the Solana blockchain. There will be 8,866 unique digital collectibles in total.</div>
-          </div>
-          <div class="flex md:justify-end justify-center w-full md:w-1/2 mt-5">
-            <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <HomeMain @observe-visibility="visibilityChanged" />
     <div>
       <img src="images/background_front.png" alt="background" class="w-100 h-100" />
     </div>
-    <div
-      class="h-2/3 flex relative mt-5 md:mt-32"
-      data-color="bg-violet-400"
-      v-observe-visibility="visibilityChanged"
+    <HomePromoItem
+      imageSrc="images/examples/01.jpg"
+      :isRight="true"
+      titleId="title-one-animation"
+      color="bg-violet-400"
+      @observe-visibility="visibilityChanged"
     >
-      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
-        <div class="mx-auto md:mr-0 md:ml-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
-          <img
-            src="images/examples/01.jpg"
-            alt="example NFT"
-            class="rounded-3xl hover:scale-105 transform transition"
-          />
-        </div>
-        <div class="mt-5 md:my-auto px-6 text-xl md:mr-auto xl:pr-36 xl:pl-6">
-          <span>Rice feed more than half of the world's population. We want to share our love to rice with the you.</span>
-          <h2
-            class="text-6xl text-center mt-3 md:text-left md:text-7xl font-black text-orange-300 md:-ml-20 uppercase"
-            id="title-one-animation"
-          >
-            Made By
-            <br />Rice Lover
-          </h2>
-        </div>
-      </div>
-    </div>
+      <template v-slot:title>
+        Made By
+        <br />Rice Lover
+      </template>
+      <template
+        v-slot:description
+      >Rice feed more than half of the world's population. We want to share our love to rice with the you.</template>
+    </HomePromoItem>
     <img src="images/bibimbap.png" alt="Bibimbap" class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2" />
-    <div
-      class="h-2/3 flex mt-12 md:mt-32"
-      data-color="bg-indigo-400"
-      v-observe-visibility="visibilityChanged"
+    <HomePromoItem
+      imageSrc="images/examples/01.jpg"
+      :isRight="false"
+      titleId="title-two-animation"
+      color="bg-indigo-400"
+      @observe-visibility="visibilityChanged"
     >
-      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
-        <div class="mx-auto md:ml-0 md:mr-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
-          <img
-            src="images/examples/01.jpg"
-            alt="example NFT"
-            class="rounded-3xl hover:scale-105 transform transition"
-          />
-        </div>
-        <div class="mt-5 md:my-auto px-6 text-xl md:ml-auto md:-order-1 z-20 xl:pl-36 xl:pr-6">
-          <span>Always start with the community, building and respecting our community is the #1 thing of GohanGo!!. We believe together we can make the word a little bit different.</span>
-          <h2
-            class="text-6xl text-center mt-3 md:text-right md:text-7xl font-black text-orange-300 md:-mr-32 uppercase"
-            id="title-two-animation"
-          >
-            Community
-            <br />First
-          </h2>
-        </div>
-      </div>
-    </div>
+      <template v-slot:title>
+        Community
+        <br />First
+      </template>
+      <template
+        v-slot:description
+      >Always start with the community, building and respecting our community is the #1 thing of GohanGo!!. We believe together we can make the word a little bit different.</template>
+    </HomePromoItem>
     <img
       src="images/hainanese_chicken.png"
       alt="Hainanese Chicken"
       class="w-28 mt-5 mr-10 mb-0 md:w-48 md:mr-2 ml-auto"
     />
-    <div
-      class="h-2/3 flex mt-12 md:mt-32"
-      data-color="bg-blue-400"
-      v-observe-visibility="visibilityChanged"
+    <HomePromoItem
+      imageSrc="images/examples/01.jpg"
+      color="bg-blue-400"
+      titleId="title-three-animation"
+      :isRight="true"
+      @observe-visibility="visibilityChanged"
     >
-      <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
-        <div class="mx-auto md:mr-0 md:ml-auto p-3 w-96 md:w-full lg:w-3/5 lg:col-span-2">
-          <img
-            src="images/examples/01.jpg"
-            alt="example NFT"
-            class="rounded-3xl hover:scale-105 transform transition"
-          />
-        </div>
-        <div class="mt-5 md:my-auto px-6 text-xl md:mr-auto xl:pr-36 xl:pl-6">
-          <span>We don't want to be yet another NFT project, we want to be "the" NFT project. We want to support</span>
-          <h2
-            class="text-6xl text-center mt-3 md:text-left md:text-7xl font-black text-orange-300 md:-ml-20 uppercase"
-            id="title-one-animation"
-          >Something Different</h2>
-        </div>
-      </div>
-    </div>
+      <template v-slot:title>Something Different</template>
+      <template
+        v-slot:description
+      >We don't want to be yet another NFT project, we want to be "the" NFT project. We want to support.</template>
+    </HomePromoItem>
     <HomeRoadMap @observe-visibility="visibilityChanged" />
     <HomeFaq @observe-visibility="visibilityChanged" />
   </div>
@@ -127,12 +66,16 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import HomeRoadMap from './components/Home/HomeRoadMap.vue'
 import HomeFaq from './components/Home/HomeFaq.vue'
+import HomeMain from './components/Home/HomeMain.vue'
+import HomePromoItem from './components/Home/HomePromoItem.vue'
 
 export default {
   components: {
     BaseHeader,
     HomeRoadMap,
-    HomeFaq
+    HomeFaq,
+    HomeMain,
+    HomePromoItem
   },
   setup() {
     const bgColour = ref('');
@@ -178,6 +121,14 @@ export default {
         '#title-two-animation',
         {
           scrollTrigger: '#title-two-animation',
+          duration: 0.75, opacity: 0, y: 150, stagger: 0.25
+        }
+      )
+
+      gsap.from(
+        '#title-three-animation',
+        {
+          scrollTrigger: '#title-three-animation',
           duration: 0.75, opacity: 0, y: 150, stagger: 0.25
         }
       )

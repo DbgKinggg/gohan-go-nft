@@ -5,7 +5,7 @@
                 class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-indigo-900"
             >FAQ</h2>
         </div>
-        <div class="w-full max-w-xl p-2 mx-auto mt-12 bg-green-100/50 rounded-2xl space-y-2">
+        <div class="w-full max-w-2xl p-2 mx-auto mt-12 bg-green-100/50 rounded-2xl space-y-2">
             <BaseDisclosure>
                 <template v-slot:title>Wen, how and where?</template>
                 <template v-slot:body>
