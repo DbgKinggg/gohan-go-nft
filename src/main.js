@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./index.css";
 import { ObserveVisibility } from "vue-observe-visibility";
+import i18n from "./i18n";
 
 const app = createApp(App);
 app.directive("observe-visibility", {
@@ -13,4 +14,5 @@ app.directive("observe-visibility", {
   unmounted: ObserveVisibility.unbind,
 });
 
+app.use(i18n);
 app.mount("#app");

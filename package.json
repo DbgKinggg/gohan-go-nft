@@ -11,6 +11,7 @@
     "@heroicons/vue": "^1.0.5",
     "gsap": "^3.9.1",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.1.9",
     "vue-observe-visibility": "^1.0.0"
   },
   "devDependencies": {

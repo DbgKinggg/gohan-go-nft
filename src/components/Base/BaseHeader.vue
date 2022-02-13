@@ -5,7 +5,7 @@
             @click="openModal"
             class="p-3 shadow-md text-sm md:text-base bg-white hover:bg-gray-200 active:bg-gray-300 rounded-3xl hover:-translate-y-0.5 transform transition focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:outline-none focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500"
             type="button"
-        >Connect Wallet Soon</button>
+        >{{ t('base.connectWallet') }}</button>
         <TransitionRoot appear :show="isOpen" as="template">
             <Dialog as="div" @close="closeModal">
                 <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -39,11 +39,9 @@
                                 <DialogTitle
                                     as="h3"
                                     class="text-lg font-medium leading-6 text-gray-900"
-                                >Please come back later</DialogTitle>
+                                >{{ t('base.warningTitle') }}</DialogTitle>
                                 <div class="mt-2">
-                                    <p
-                                        class="text-sm text-gray-500"
-                                    >You will be able to connect your wallet and mint your GohanGo!! NFT when mint is live, thanks!</p>
+                                    <p class="text-sm text-gray-500">{{ t('base.warningMsg') }}</p>
                                 </div>
 
                                 <div class="mt-4">
@@ -51,7 +49,7 @@
                                         type="button"
                                         class="inline-flex justify-center px-4 py-2 text-sm font-medium text-indigo-900 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
                                         @click="closeModal"
-                                    >Close</button>
+                                    >{{ t('base.close') }}</button>
                                 </div>
                             </div>
                         </TransitionChild>
@@ -72,6 +70,7 @@ import {
     DialogOverlay,
     DialogTitle,
 } from '@headlessui/vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     components: {
@@ -83,6 +82,7 @@ export default {
         DialogTitle,
     },
     setup() {
+        const { t } = useI18n({ useScope: 'global' })
         const isOpen = ref(false)
 
         return {
@@ -93,6 +93,7 @@ export default {
             openModal() {
                 isOpen.value = true
             },
+            t,
         }
     }
 }

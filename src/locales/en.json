@@ -1,0 +1,57 @@
+{
+  "home": {
+    "main": {
+      "description": "GohanGo!! is a programmatic generated NFT collection on the Solana blockchain. There will be 8,866 unique digital collectibles in total.",
+      "tag": "Coming soon!"
+    },
+    "promo": [
+      {
+        "title": "Made By\nRice Lover",
+        "description": "Rice feed more than half of the world's population. We want to share our love to rice with the you."
+      },
+      {
+        "title": "Community\nFirst",
+        "description": "Always start with the community, building and respecting our community is the #1 thing of GohanGo!!. We believe together we can make the word a little bit different."
+      },
+      {
+        "title": "Something Different",
+        "description": "We don't want to be yet another NFT project, we want to be \"the\" NFT project. We want to support."
+      }
+    ],
+    "roadmap": {
+      "title": "Roadmap",
+      "steps": [
+        {
+          "step": "Step 1",
+          "title": "Launch",
+          "headline": "Launch the project",
+          "description": "Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum."
+        },
+        {
+          "step": "Step 2",
+          "title": "Community",
+          "headline": "Building the community",
+          "description": "Building the communitybsahjasdgjhagsjhdg"
+        },
+        {
+          "step": "Step 3",
+          "title": "Mint",
+          "headline": "Get your GohanGo!!",
+          "description": "Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum."
+        },
+        {
+          "step": "Step 4",
+          "title": "More",
+          "headline": "More",
+          "description": "Building the communitybsahjasdgjhagsjhdg. We will open source our project."
+        }
+      ]
+    }
+  },
+  "base": {
+    "connectWallet": "Connect Wallet Soon",
+    "warningTitle": "Please come back later",
+    "warningMsg": "You will be able to connect your wallet and mint your GohanGo!! NFT when mint is live, thanks!",
+    "close": "Close"
+  }
+}

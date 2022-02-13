@@ -21,9 +21,7 @@
                     <div
                         class="md:text-8xl text-6xl uppercase font-black text-indigo-900 title-animation"
                     >GohanGo!!</div>
-                    <div
-                        class="text-xl mt-4 text-animation"
-                    >GohanGo!! is a programmatic generated NFT collection on the Solana blockchain. There will be 8,866 unique digital collectibles in total.</div>
+                    <div class="text-xl mt-4 text-animation">{{ t('home.main.description') }}</div>
                     <div
                         class="mt-3 md:mt-5 p-2 bg-indigo-800 shadow-md items-center text-indigo-100 rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
                         role="alert"
@@ -31,7 +29,9 @@
                         <span
                             class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
                         >New</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">Coming Soon!</span>
+                        <span
+                            class="font-semibold mr-2 text-left flex-auto"
+                        >{{ t('home.main.tag') }}</span>
                         <ChevronRightIcon class="h-5 w-5" />
                     </div>
                     <div class="mt-5 flex justify-center space-x-5">
@@ -40,17 +40,23 @@
                     </div>
                 </div>
                 <div class="flex md:justify-end justify-center w-full mt-5 md:w-1/2 md:my-auto">
-                    <img src="images/monkey.png" alt="GohanGo!!" class="max-h-40" />
+                    <img
+                        src="images/monkey.png"
+                        alt="GohanGo!!"
+                        class="max-h-40 transform transition hover:scale-105 hover:translate-x-1 hover:translate-y-2"
+                    />
                 </div>
             </div>
         </div>
     </div>
+    <img src="images/background_front.png" alt="background" class="w-100 h-100" />
 </template>
 
 <script>
 import { ChevronRightIcon } from '@heroicons/vue/solid'
 import BaseIconTwitter from '../Base/Icon/BaseIconTwitter.vue'
 import BaseIconDiscord from '../Base/Icon/BaseIconDiscord.vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     components: {
@@ -59,12 +65,14 @@ export default {
         BaseIconDiscord,
     },
     setup(props, { emit }) {
+        const { t } = useI18n({ useScope: 'global' })
         const emitVisibility = (...args) => {
             emit('observe-visibility', ...args)
         }
 
         return {
-            emitVisibility
+            emitVisibility,
+            t,
         }
     },
     emits: ['observe-visibility']

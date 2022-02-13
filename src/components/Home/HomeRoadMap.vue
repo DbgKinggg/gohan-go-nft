@@ -2,30 +2,30 @@
     <div class="mt-12 md:mt-24 px-3" data-color="bg-sky-400" v-observe-visibility="emitVisibility">
         <h2
             class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-indigo-900"
-        >Roadmap</h2>
+        >{{ t('home.roadmap.title') }}</h2>
         <section class="max-w-5xl mx-auto py-10">
             <div>
                 <HomeRoadMapLeft
-                    step="Step 1"
-                    title="Launch"
-                    headline="Launch the project"
-                >Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</HomeRoadMapLeft>
+                    :step="t('home.roadmap.steps.0.step')"
+                    :title="t('home.roadmap.steps.0.title')"
+                    :headline="t('home.roadmap.steps.0.headline')"
+                >{{ t('home.roadmap.steps.0.description') }}</HomeRoadMapLeft>
                 <HomeRoadMapRight
-                    step="Step 2"
-                    title="Community"
-                    headline="Building the community"
-                >Building the communitybsahjasdgjhagsjhdg</HomeRoadMapRight>
+                    :step="t('home.roadmap.steps.1.step')"
+                    :title="t('home.roadmap.steps.1.title')"
+                    :headline="t('home.roadmap.steps.1.headline')"
+                >{{ t('home.roadmap.steps.1.description') }}</HomeRoadMapRight>
                 <HomeRoadMapLeft
-                    title="Mint"
-                    step="Step 3"
-                    headline="Get your GohanGo!!"
-                >hkasjhdkahksjdhjkahkjshdkha ksjdhkjhakjsdhkjahskjdhkjashkj</HomeRoadMapLeft>
+                    :step="t('home.roadmap.steps.2.step')"
+                    :title="t('home.roadmap.steps.2.title')"
+                    :headline="t('home.roadmap.steps.2.headline')"
+                >{{ t('home.roadmap.steps.2.description') }}</HomeRoadMapLeft>
                 <HomeRoadMapRight
-                    step="Step 4"
-                    title="More"
-                    headline="More and more to come"
+                    :step="t('home.roadmap.steps.3.step')"
+                    :title="t('home.roadmap.steps.3.title')"
+                    :headline="t('home.roadmap.steps.2.headline')"
                     :includeIndicator="false"
-                >Building the communitybsahjasdgjhagsjhdg. We will open source our project.</HomeRoadMapRight>
+                >{{ t('home.roadmap.steps.3.description') }}</HomeRoadMapRight>
             </div>
         </section>
     </div>
@@ -34,6 +34,7 @@
 <script>
 import HomeRoadMapLeft from './HomeRoadMapLeft.vue'
 import HomeRoadMapRight from './HomeRoadMapRight.vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     components: {
@@ -41,12 +42,15 @@ export default {
         HomeRoadMapRight
     },
     setup(props, { emit }) {
+        const { t } = useI18n({ useScope: 'global' })
+
         const emitVisibility = (...args) => {
             emit('observe-visibility', ...args)
         }
 
         return {
-            emitVisibility
+            emitVisibility,
+            t,
         }
     },
     emits: ['observe-visibility']

@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import {
     Listbox,
     ListboxButton,
@@ -58,6 +58,7 @@ import {
     ListboxOption,
 } from '@headlessui/vue'
 import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid'
+import { useI18n } from 'vue-i18n'
 
 export default {
     components: {
@@ -69,6 +70,8 @@ export default {
         SelectorIcon
     },
     setup() {
+        const { locale } = useI18n({ useScope: 'global' })
+
         const languages = [
             {
                 'name': 'English',
@@ -90,9 +93,16 @@ export default {
 
         const selectedLanguage = ref(languages[0])
 
+        watch(selectedLanguage, (newLocale) => {
+            // set locale
+            locale.value = newLocale.value
+            localStorage.setItem('locale', newLocale.value)
+        })
+
         return {
             languages,
-            selectedLanguage
+            selectedLanguage,
+            locale
         }
     }
 }
