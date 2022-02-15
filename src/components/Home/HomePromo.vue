@@ -43,8 +43,8 @@
     </HomePromoItem>
     <img
         id="rice-example-3"
-        src="images/curry_rice.png"
-        alt="Curry rice"
+        src="images/bento.png"
+        alt="Bento"
         class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
     />
 </template>

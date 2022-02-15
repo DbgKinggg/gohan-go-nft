@@ -7,25 +7,16 @@
         </div>
         <div class="w-full max-w-2xl p-2 mx-auto mt-12 bg-green-100/50 rounded-2xl space-y-2">
             <BaseDisclosure>
-                <template v-slot:title>Wen, how and where?</template>
-                <template v-slot:body>
-                    If you're unhappy with your purchase for any reason, email us within
-                    90 days and we'll refund you in full, no questions asked.
-                </template>
+                <template v-slot:title>{{ t('home.faq.questions.0.question') }}</template>
+                <template v-slot:body>{{ t('home.faq.questions.0.answer') }}</template>
             </BaseDisclosure>
             <BaseDisclosure>
-                <template v-slot:title>Why should I but GohanGo!! NFT?</template>
-                <template v-slot:body>
-                    If you're unhappy with your purchase for any reason, email us within
-                    90 days and we'll refund you in full, no questions asked.
-                </template>
+                <template v-slot:title>{{ t('home.faq.questions.1.question') }}</template>
+                <template v-slot:body>{{ t('home.faq.questions.1.answer') }}</template>
             </BaseDisclosure>
             <BaseDisclosure>
-                <template v-slot:title>Wen, how and where?</template>
-                <template v-slot:body>
-                    If you're unhappy with your purchase for any reason, email us within
-                    90 days and we'll refund you in full, no questions asked.
-                </template>
+                <template v-slot:title>{{ t('home.faq.questions.2.question') }}</template>
+                <template v-slot:body>{{ t('home.faq.questions.2.answer') }}</template>
             </BaseDisclosure>
         </div>
     </div>
@@ -33,18 +24,21 @@
 
 <script>
 import BaseDisclosure from '../Base/BaseDisclosure.vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     components: {
         BaseDisclosure,
     },
     setup(props, { emit }) {
+        const { t } = useI18n({ useScope: 'global' })
         const emitVisibility = (...args) => {
             emit('observe-visibility', ...args)
         }
 
         return {
-            emitVisibility
+            emitVisibility,
+            t,
         }
     },
     emits: ['observe-visibility']

@@ -5,8 +5,8 @@
         v-observe-visibility="emitVisibility"
     >
         <img
-            src="images/bento.png"
-            alt="Angelfish"
+            src="images/pinapple.png"
+            alt="Pinapple rice"
             class="absolute w-48 top-12 md:top-24 -left-16 md:left-16 hover:animate-spin"
         />
         <img
@@ -49,7 +49,6 @@
             </div>
         </div>
     </div>
-    <img src="images/background_front.png" alt="background" class="w-100 h-100" />
 </template>
 
 <script>

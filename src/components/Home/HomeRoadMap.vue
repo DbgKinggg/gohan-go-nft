@@ -9,23 +9,43 @@
                     :step="t('home.roadmap.steps.0.step')"
                     :title="t('home.roadmap.steps.0.title')"
                     :headline="t('home.roadmap.steps.0.headline')"
-                >{{ t('home.roadmap.steps.0.description') }}</HomeRoadMapLeft>
+                >
+                    <li>{{ t('home.roadmap.steps.0.description.0') }}</li>
+                    <li>{{ t('home.roadmap.steps.0.description.1') }}</li>
+                    <li>{{ t('home.roadmap.steps.0.description.2') }}</li>
+                    <li>{{ t('home.roadmap.steps.0.description.3') }}</li>
+                </HomeRoadMapLeft>
                 <HomeRoadMapRight
                     :step="t('home.roadmap.steps.1.step')"
                     :title="t('home.roadmap.steps.1.title')"
                     :headline="t('home.roadmap.steps.1.headline')"
-                >{{ t('home.roadmap.steps.1.description') }}</HomeRoadMapRight>
+                >
+                    <li>{{ t('home.roadmap.steps.1.description.0') }}</li>
+                    <li>{{ t('home.roadmap.steps.1.description.1') }}</li>
+                    <li>{{ t('home.roadmap.steps.1.description.2') }}</li>
+                    <li>{{ t('home.roadmap.steps.1.description.3') }}</li>
+                </HomeRoadMapRight>
                 <HomeRoadMapLeft
                     :step="t('home.roadmap.steps.2.step')"
                     :title="t('home.roadmap.steps.2.title')"
                     :headline="t('home.roadmap.steps.2.headline')"
-                >{{ t('home.roadmap.steps.2.description') }}</HomeRoadMapLeft>
+                >
+                    <li>{{ t('home.roadmap.steps.2.description.0') }}</li>
+                    <li>{{ t('home.roadmap.steps.2.description.1') }}</li>
+                    <li>{{ t('home.roadmap.steps.2.description.2') }}</li>
+                </HomeRoadMapLeft>
                 <HomeRoadMapRight
                     :step="t('home.roadmap.steps.3.step')"
                     :title="t('home.roadmap.steps.3.title')"
-                    :headline="t('home.roadmap.steps.2.headline')"
+                    :headline="t('home.roadmap.steps.3.headline')"
                     :includeIndicator="false"
-                >{{ t('home.roadmap.steps.3.description') }}</HomeRoadMapRight>
+                >
+                    <li>{{ t('home.roadmap.steps.3.description.0') }}</li>
+                    <li>{{ t('home.roadmap.steps.3.description.1') }}</li>
+                    <li>{{ t('home.roadmap.steps.3.description.2') }}</li>
+                    <li>{{ t('home.roadmap.steps.3.description.3') }}</li>
+                    <li>{{ t('home.roadmap.steps.3.description.4') }}</li>
+                </HomeRoadMapRight>
             </div>
         </section>
     </div>

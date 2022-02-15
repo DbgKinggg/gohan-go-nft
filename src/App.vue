@@ -5,6 +5,7 @@
   >
     <BaseHeader />
     <HomeMain @observe-visibility="visibilityChanged" />
+    <HomeStory />
     <HomePromo @observe-visibility="visibilityChanged" />
     <HomeRoadMap @observe-visibility="visibilityChanged" />
     <HomeFaq @observe-visibility="visibilityChanged" />
@@ -20,6 +21,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import HomeRoadMap from './components/Home/HomeRoadMap.vue'
 import HomeFaq from './components/Home/HomeFaq.vue'
 import HomeMain from './components/Home/HomeMain.vue'
+import HomeStory from './components/Home/HomeStory.vue'
 import HomeFooter from './components/Home/HomeFooter.vue'
 import HomePromo from './components/Home/HomePromo.vue'
 
@@ -31,6 +33,7 @@ export default {
     HomeMain,
     HomeFooter,
     HomePromo,
+    HomeStory,
   },
   setup() {
     const bgColour = ref('');

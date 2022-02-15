@@ -1,21 +1,22 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! is a programmatic generated NFT collection on the Solana blockchain. There will be 8,866 unique digital collectibles in total.",
+      "description": "GohanGo!! is a collection of 8,866 algorithmically generated NFTs living on the Solana blockchain. Every GohanGo!! NFT features a different set of unique attributes.",
       "tag": "Coming soon!"
     },
+    "backstories": "<span class=\"text-orange-300\">Gohan</span> is a <span class=\"text-orange-300\">monkey</span> who loves to eat <span class=\"text-orange-300\">rice</span>, his dream is to try out all the rice dishes in the world!<br /><br />Hainanese chicken rice, Katsudon, Curry rice, Nasi goreng, Risotto, Jambalaya, Bibimbap, Biryani, you name it, there are just countless of them. How can the world live without rice?<br /><br />Let’s join the <span class=\"text-orange-300\">GohanGo!!</span> family, let all the rice lovers build the <span class=\"text-orange-300\">world</span> together!",
     "promo": [
       {
-        "title": "Made By\nRice Lover",
-        "description": "Rice feed more than half of the world's population. We want to share our love to rice with the you."
+        "title": "For Rice Lover",
+        "description": "Do you know rice feeds more than half of the world's population? We want to share our love for rice with all of you."
       },
       {
         "title": "Community\nFirst",
-        "description": "Always start with the community, building and respecting our community is the #1 thing of GohanGo!!. We believe together we can make the word a little bit different."
+        "description": "Always start with the community. Keeping building and respecting our community is the #1 thing of GohanGo!!. We want to build the funniest and healthiest community in the Sonala NFT community."
       },
       {
         "title": "Something Different",
-        "description": "We don't want to be yet another NFT project, we want to be \"the\" NFT project. We want to support."
+        "description": "We don't want to be yet another NFT project, we want to be \"the\" NFT project in the Solana blockchain. We want to support those who are in need in the world, that’s why a portion of our royalties will be used for charities."
       }
     ],
     "roadmap": {
@@ -23,27 +24,64 @@
       "steps": [
         {
           "step": "Step 1",
-          "title": "Launch",
-          "headline": "Launch the project",
-          "description": "Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum."
+          "title": "Building",
+          "headline": "Building the project",
+          "description": [
+            "Release our official website",
+            "Create an official Discord server and Twitter account",
+            "Continue the creation of our beatify hand drawn artwork",
+            "NFT creation and minting functionality building"
+          ]
         },
         {
           "step": "Step 2",
           "title": "Community",
           "headline": "Building the community",
-          "description": "Building the communitybsahjasdgjhagsjhdg"
+          "description": [
+            "Continue to develop and expand our community",
+            "More Discord functionality building, games, and special events are incoming",
+            "Airdrops and giveaways!",
+            "Continuous marketing campaigns"
+          ]
         },
         {
           "step": "Step 3",
-          "title": "Mint",
+          "title": "Live",
           "headline": "Get your GohanGo!!",
-          "description": "Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum."
+          "description": [
+            "Pre-sale live",
+            "Public sale live",
+            "Integration with major secondary market"
+          ]
         },
         {
           "step": "Step 4",
           "title": "More",
-          "headline": "More",
-          "description": "Building the communitybsahjasdgjhagsjhdg. We will open source our project."
+          "headline": "More and more to come",
+          "description": [
+            "Holders exclusive benefits",
+            "Holders exclusive tools building (Rarity chart, marketplace...)",
+            "More holders exclusive events",
+            "Donations",
+            "and more to come"
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "name": "FAQ",
+      "questions": [
+        {
+          "question": "Wen, how and where?",
+          "answer": " We are scheduled to go live with our NFT project on March 15th on the Solana blockchain. You will only be able to MINT them on our official website. Please follow our Twitter account and join our Discord server to get the latest updates from us!"
+        },
+        {
+          "question": "Why should I but GohanGo!! NFT?",
+          "answer": "You are not only just getting a piece of JPEG, you are getting a unique NFT that was hand-drawn and randomly assembled. They are all living on the Solana blockchain, owning one of the GohanGo!! NFTs means you get access to community-wide events, giveaways and early access to any further generations and drops."
+        },
+        {
+          "question": "Which GohanGo!! NFT will I get?",
+          "answer": "No one knows! They will all be distributed randomly, whether good or bad. The good thing is all the 8,866 NFTs are unique, they all look pretty and special!"
         }
       ]
     }
