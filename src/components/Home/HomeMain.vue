@@ -5,16 +5,16 @@
         v-observe-visibility="emitVisibility"
     >
         <img
-            src="images/pinapple.png"
+            src="/images/pinapple.png"
             alt="Pinapple rice"
             class="absolute w-48 top-12 md:top-24 -left-16 md:left-16 hover:animate-spin"
         />
         <img
-            src="images/curry_rice.png"
+            src="/images/curry_rice.png"
             alt="Curry rice"
             class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:right-16 z-10 hover:animate-spin"
         />
-        <img src="images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
+        <img src="/images/bubble.png" alt="Angelfish" class="absolute w-100 top-1/2 img-animation" />
         <div class="mt-48 md:m-auto max-w-6xl p-12 z-10">
             <div class="flex flex-col md:flex-row">
                 <div class="mt-2 md:w-1/2 max-w-md flex flex-col justify-center">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="flex md:justify-end justify-center w-full mt-5 md:w-1/2 md:my-auto">
                     <img
-                        src="images/monkey.png"
+                        src="/images/monkey.png"
                         alt="GohanGo!!"
                         class="max-h-40 transform transition hover:scale-105 hover:translate-x-1 hover:translate-y-2"
                     />
