@@ -24,7 +24,7 @@
                     <slot name="description"></slot>
                 </span>
                 <h2
-                    class="text-6xl text-center mt-3 md:text-7xl font-black text-orange-300 uppercase"
+                    class="text-5xl sm:text-6xl text-center mt-3 md:text-7xl font-black text-orange-300 uppercase"
                     :class="isRight ? rightTitleClasses : leftTitleClasses"
                     :id="titleId"
                 >
@@ -53,8 +53,8 @@ export default {
 
         const rightImgClasses = 'md:mr-0 md:ml-auto'
         const leftImgClasses = 'md:ml-0 md:mr-auto'
-        const rightTextClasses = 'md:mr-auto xl:pr-36 xl:pl-6'
-        const leftTextClasses = 'md:ml-auto md:-order-1 xl:pl-36 xl:pr-6'
+        const rightTextClasses = 'md:px-3 md:mr-auto xl:pr-36 xl:pl-6'
+        const leftTextClasses = 'md:px-3 md:-order-1 xl:pr-36 xl:pr-6'
         const rightTitleClasses = 'md:text-left md:-ml-20'
         const leftTitleClasses = 'md:text-right md:-mr-32'
 

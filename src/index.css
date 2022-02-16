@@ -8,6 +8,7 @@
 }
 
 body {
-  font-family: "allthingpink", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0.3em;
+  /* font-family: "allthingpink", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  /* letter-spacing: 0.3em; */
+  font-family: "Shizuru", cursive;
 }
