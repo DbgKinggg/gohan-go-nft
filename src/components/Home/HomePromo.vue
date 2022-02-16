@@ -17,7 +17,7 @@
             class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
         />
         <HomePromoItem
-            imageSrc="/images/examples/01.jpg"
+            imageSrc="/images/examples/02.jpeg"
             :isRight="false"
             titleId="title-two-animation"
             color="bg-indigo-400"

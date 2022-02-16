@@ -5,6 +5,8 @@
         >
             <svg
                 class="fill-current p-2"
+                width="52"
+                height="52"
                 viewBox="0 -28.5 256 256"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid"

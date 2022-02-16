@@ -18,6 +18,10 @@
                 <template v-slot:title>{{ t('home.faq.questions.2.question') }}</template>
                 <template v-slot:body>{{ t('home.faq.questions.2.answer') }}</template>
             </BaseDisclosure>
+            <BaseDisclosure>
+                <template v-slot:title>{{ t('home.faq.questions.3.question') }}</template>
+                <template v-slot:body>{{ t('home.faq.questions.3.answer') }}</template>
+            </BaseDisclosure>
         </div>
     </div>
 </template>
