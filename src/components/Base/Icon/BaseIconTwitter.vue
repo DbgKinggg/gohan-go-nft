@@ -1,5 +1,5 @@
 <template>
-    <a href="https://twitter.com/GohanGoNFT" target="_blank" rel="”noopener”">
+    <a href="https://twitter.com/GohanGoNFT" target="_blank" rel="noopener" aria-label="Twitter">
         <span
             class="block bg-white transform hover:-translate-y-3 border-2 w-14 h-14 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl"
         >

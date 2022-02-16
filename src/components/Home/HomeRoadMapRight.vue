@@ -21,8 +21,10 @@
                         - {{ title }}
                     </div>
                     <div class="p-3 text-3xl text-indigo-500 font">{{ headline }}</div>
-                    <div class="px-3 pb-6">
-                        <slot></slot>
+                    <div class="px-3 pb-6 text-xl">
+                        <ul class="list-disc pl-4">
+                            <slot></slot>
+                        </ul>
                     </div>
                 </div>
             </div>

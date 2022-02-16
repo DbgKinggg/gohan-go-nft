@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* architects-daughter-regular - latin */
 @font-face {
-  font-family: "allthingpink";
-  src: url("./font/allthingspink.ttf") format("truetype");
+  font-family: "Architects Daughter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../font/architects-daughter-v17-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../font/architects-daughter-v17-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../font/architects-daughter-v17-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../font/architects-daughter-v17-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("../font/architects-daughter-v17-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../font/architects-daughter-v17-latin-regular.svg#ArchitectsDaughter")
+      format("svg"); /* Legacy iOS */
 }
 
 body {
-  /* font-family: "allthingpink", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-  /* letter-spacing: 0.3em; */
-  font-family: "Shizuru", cursive;
+  font-family: "Architects Daughter", Arial, Helvetica, sans-serif;
 }

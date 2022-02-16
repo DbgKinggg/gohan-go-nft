@@ -1,5 +1,5 @@
 <template>
-    <a href="https://discord.gg/GSgmWYQUPD" target="_blank" rel="”noopener”">
+    <a href="https://discord.gg/GSgmWYQUPD" target="_blank" rel="noopener" aria-label="Discord">
         <span
             class="block bg-white transform hover:-translate-y-3 border-2 w-14 h-14 rounded-full duration-500 text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white text-2xl"
         >

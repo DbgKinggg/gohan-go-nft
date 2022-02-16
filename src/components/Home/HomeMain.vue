@@ -21,7 +21,9 @@
                     <div
                         class="md:text-8xl text-6xl uppercase font-black text-indigo-900 title-animation"
                     >GohanGo!!</div>
-                    <div class="text-xl mt-4 text-animation">{{ t('home.main.description') }}</div>
+                    <div
+                        class="text-xl xl:text-2xl mt-4 text-animation"
+                    >{{ t('home.main.description') }}</div>
                     <div
                         class="mt-3 md:mt-5 p-2 bg-indigo-800 shadow-md items-center text-indigo-100 rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
                         role="alert"
