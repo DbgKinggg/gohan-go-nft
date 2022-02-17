@@ -44,7 +44,6 @@
                     <li>{{ t('home.roadmap.steps.3.description.1') }}</li>
                     <li>{{ t('home.roadmap.steps.3.description.2') }}</li>
                     <li>{{ t('home.roadmap.steps.3.description.3') }}</li>
-                    <li>{{ t('home.roadmap.steps.3.description.4') }}</li>
                 </HomeRoadMapRight>
             </div>
         </section>

@@ -43,9 +43,9 @@
                 </div>
                 <div class="flex md:justify-end justify-center w-full mt-5 md:w-1/2 md:my-auto">
                     <img
-                        src="/images/monkey.png"
+                        src="/images/examples/02_no_background.png"
                         alt="GohanGo!!"
-                        class="max-h-40 transform transition hover:scale-105 hover:translate-x-1 hover:translate-y-2"
+                        class="max-h-80 transform transition hover:scale-105 hover:translate-x-1 hover:translate-y-2"
                     />
                 </div>
             </div>

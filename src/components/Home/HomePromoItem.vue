@@ -8,12 +8,13 @@
         <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
             <div
                 class="mx-auto p-5 w-auto lg:w-3/5 lg:col-span-2"
-                :class="isRight ? rightImgClasses : leftImgClasses"
+                :class="isRight ? rightImgWrapperClasses : leftImgWrapperClasses"
             >
                 <img
                     :src="imageSrc"
                     alt="example NFT"
-                    class="rounded-3xl hover:scale-105 transform transition"
+                    class="rounded-3xl w-full max-w-md hover:scale-105 transform transition"
+                    :class="isRight ? rightImgClasses : leftImgClasses"
                 />
             </div>
             <div
@@ -51,8 +52,10 @@ export default {
             emit('observe-visibility', ...args)
         }
 
-        const rightImgClasses = 'md:mr-0 md:ml-auto'
-        const leftImgClasses = 'md:ml-0 md:mr-auto'
+        const rightImgWrapperClasses = 'md:mr-0 md:ml-auto'
+        const leftImgWrapperClasses = 'md:ml-0 md:mr-auto'
+        const rightImgClasses = 'ml-auto'
+        const leftImgClasses = 'mr-auto'
         const rightTextClasses = 'md:px-3 md:mr-auto xl:pr-36 xl:pl-6'
         const leftTextClasses = 'md:px-3 md:-order-1 xl:pr-36 xl:pr-6'
         const rightTitleClasses = 'md:text-left md:-ml-20'
@@ -65,7 +68,9 @@ export default {
             rightTextClasses,
             leftTextClasses,
             rightTitleClasses,
-            leftTitleClasses
+            leftTitleClasses,
+            rightImgWrapperClasses,
+            leftImgWrapperClasses
         }
     },
     emits: ['observe-visibility']
