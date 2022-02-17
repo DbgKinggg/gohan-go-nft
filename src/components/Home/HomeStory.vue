@@ -1,6 +1,6 @@
 <template>
-    <div class="h-100 w-100 relative">
-        <img src="/images/background_front.png" alt="background" class="w-100 h-100" />
+    <div class="relative">
+        <img src="/images/background_front.png" alt="background" class="w-full" />
         <div
             class="relative mt-24 mx-3 md:mt-0 md:mx-0 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 rounded-2xl p-5 text-white bg-indigo-800/70"
         >
