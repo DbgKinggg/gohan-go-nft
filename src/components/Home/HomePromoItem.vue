@@ -11,7 +11,7 @@
                 :class="isRight ? rightImgWrapperClasses : leftImgWrapperClasses"
             >
                 <img
-                    :src="imageSrc"
+                    v-lazy="{ src: imageSrc }"
                     alt="example NFT"
                     class="rounded-3xl w-full max-w-md hover:scale-105 transform transition"
                     :class="isRight ? rightImgClasses : leftImgClasses"

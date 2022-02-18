@@ -4,6 +4,7 @@ import "./index.css";
 import { ObserveVisibility } from "vue-observe-visibility";
 import i18n from "./i18n";
 import { createAppRouter, defaultLocale } from "./router/index.js";
+import VueLazyLoad from "vue3-lazyload";
 
 const app = createApp(App);
 app.directive("observe-visibility", {
@@ -19,4 +20,5 @@ const $i18n = i18n(defaultLocale);
 
 app.use($i18n);
 app.use(createAppRouter($i18n));
+app.use(VueLazyLoad);
 app.mount("#app");
