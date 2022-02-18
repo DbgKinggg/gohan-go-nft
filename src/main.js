@@ -3,6 +3,7 @@ import App from "./App.vue";
 import "./index.css";
 import { ObserveVisibility } from "vue-observe-visibility";
 import i18n from "./i18n";
+import { createAppRouter, defaultLocale } from "./router/index.js";
 
 const app = createApp(App);
 app.directive("observe-visibility", {
@@ -14,5 +15,8 @@ app.directive("observe-visibility", {
   unmounted: ObserveVisibility.unbind,
 });
 
-app.use(i18n);
+const $i18n = i18n(defaultLocale);
+
+app.use($i18n);
+app.use(createAppRouter($i18n));
 app.mount("#app");

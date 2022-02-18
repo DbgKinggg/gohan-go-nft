@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import {
     Listbox,
     ListboxButton,
@@ -59,6 +59,7 @@ import {
 } from '@headlessui/vue'
 import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 
 export default {
     components: {
@@ -91,12 +92,41 @@ export default {
             }
         ];
 
-        const selectedLanguage = ref(languages[0])
+        const localeFoundIndex = languages.findIndex(language => language.value === locale.value)
+        const selectedLanguage = ref(
+            localeFoundIndex !== -1
+                ? languages[localeFoundIndex]
+                : languages[0]
+        )
+
+        const route = useRoute();
+
+
+        const getNewUrl = (rawUrl, locale) => {
+            const findIndex = rawUrl.indexOf("/", rawUrl.indexOf("/") + 1)
+            let newUrl = '/' + locale
+
+            if (findIndex !== -1) {
+                newUrl += rawUrl.substr(findIndex)
+            }
+
+            history.pushState(
+                {},
+                null,
+                newUrl
+            )
+        }
+
 
         watch(selectedLanguage, (newLocale) => {
             // set locale
-            locale.value = newLocale.value
-            localStorage.setItem('locale', newLocale.value)
+            if (newLocale.value) {
+                locale.value = newLocale.value
+
+                // set new url without reloading
+                const path = computed(() => route.path)
+                getNewUrl(path.value, newLocale.value)
+            }
         })
 
         return {
