@@ -4,7 +4,7 @@
             imageSrc="/images/examples/01.jpg"
             :isRight="true"
             titleId="title-one-animation"
-            color="bg-violet-400"
+            color="bg-diary-cream"
             @observe-visibility="visibilityChanged"
         >
             <template v-slot:title>{{ t('home.promo.0.title') }}</template>
@@ -20,7 +20,7 @@
             imageSrc="/images/examples/03.jpg"
             :isRight="false"
             titleId="title-two-animation"
-            color="bg-indigo-400"
+            color="bg-mischka"
             @observe-visibility="visibilityChanged"
         >
             <template v-slot:title>{{ t('home.promo.1.title') }}</template>
@@ -34,7 +34,7 @@
         />
         <HomePromoItem
             imageSrc="/images/examples/04.jpg"
-            color="bg-red-400"
+            color="bg-cavern-pink"
             titleId="title-three-animation"
             :isRight="true"
             @observe-visibility="visibilityChanged"

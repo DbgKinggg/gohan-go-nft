@@ -18,7 +18,7 @@
                 />
             </div>
             <div
-                class="mt-5 md:my-auto px-6 text-xl"
+                class="mt-5 md:my-auto px-6 text-xl text-tuna"
                 :class="isRight ? rightTextClasses : leftTextClasses"
             >
                 <span>

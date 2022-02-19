@@ -12,7 +12,7 @@
             </div>
         </div>
         <div
-            class="flex-auto border rounded-2xl shadow-md bg-sky-200 shadow-sky-400 border-gray-300 mx-3 transform transition-all duration-300 ease-in-out hover:bg-gray-100 hover:-translate-y-1 hover:scale-105"
+            class="flex-auto border rounded-2xl shadow-md bg-mischka shadow-mischka border-gray-300 mx-3 transform transition-all duration-300 ease-in-out hover:bg-gray-100 hover:-translate-y-1 hover:scale-105"
         >
             <div class="flex md:flex-row flex-col items-center">
                 <div class="flex-auto">
@@ -20,8 +20,8 @@
                         <span class="font-black">{{ step }}</span>
                         - {{ title }}
                     </div>
-                    <div class="p-3 text-3xl text-indigo-500 font">{{ headline }}</div>
-                    <div class="px-3 pb-6 text-xl">
+                    <div class="p-3 text-3xl text-river-bed font">{{ headline }}</div>
+                    <div class="px-3 pb-6 text-xl text-tuna">
                         <ul class="list-disc pl-4">
                             <slot></slot>
                         </ul>

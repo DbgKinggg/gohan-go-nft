@@ -1,8 +1,15 @@
 <template>
-    <div class="mt-12 md:mt-24 px-3" data-color="bg-sky-400" v-observe-visibility="emitVisibility">
-        <h2
-            class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-indigo-900"
-        >{{ t('home.roadmap.title') }}</h2>
+    <div
+        class="mt-12 md:mt-24 px-3 overflow-hidden"
+        data-color="bg-jet-stream"
+        v-observe-visibility="emitVisibility"
+    >
+        <div class="relative w-80 md:w-96 mx-auto">
+            <img src="/images/shape1.svg" alt="shape" class="object-cover w-full h-full rotate-180" />
+            <h2
+                class="absolute top-12 inset-x-0 md:text-7xl text-6xl uppercase font-black p-3 text-center text-river-bed"
+            >{{ t('home.roadmap.title') }}</h2>
+        </div>
         <section class="max-w-5xl mx-auto py-10">
             <div>
                 <HomeRoadMapLeft

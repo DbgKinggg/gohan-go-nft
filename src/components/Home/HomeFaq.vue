@@ -1,8 +1,13 @@
 <template>
-    <div class="pt-2 py-48 px-2" data-color="bg-green-400" v-observe-visibility="emitVisibility">
-        <div class="pt-24 md:pt-36">
+    <div
+        class="pt-2 py-48 px-2 overflow-hidden"
+        data-color="bg-tower-gray"
+        v-observe-visibility="emitVisibility"
+    >
+        <div class="relative w-80 md:w-96 mx-auto mt-24 md:mt-36">
+            <img src="/images/shape1.svg" alt="shape" class="object-cover w-full h-full rotate-180" />
             <h2
-                class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-indigo-900"
+                class="absolute top-12 inset-x-0 md:text-7xl text-6xl uppercase font-black p-3 text-center text-river-bed"
             >FAQ</h2>
         </div>
         <div
