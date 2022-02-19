@@ -1,5 +1,8 @@
 <template>
-    <div class="flex fixed top-5 right-5 md:right-10 space-x-3 z-50">
+    <div
+        class="flex fixed top-5 right-5 md:right-10 space-x-3 z-50"
+        :class="{ 'invisible': !showNavbar }"
+    >
         <HomeLocaleSelect />
         <button
             @click="openModal"
@@ -62,7 +65,7 @@
 
 <script>
 import HomeLocaleSelect from '../Home/HomeLocaleSelect.vue'
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import {
     TransitionRoot,
     TransitionChild,
@@ -84,6 +87,30 @@ export default {
     setup() {
         const { t } = useI18n({ useScope: 'global' })
         const isOpen = ref(false)
+        const showNavbar = ref(true)
+        const lastScrollPosition = ref(0)
+        const OFFSET = 60
+
+        const onScroll = () => {
+            if (window.pageYOffset < 0) {
+                return
+            }
+            if (Math.abs(window.pageYOffset - lastScrollPosition.value) < OFFSET) {
+                return
+            }
+            showNavbar.value = window.pageYOffset < lastScrollPosition.value
+            lastScrollPosition.value = window.pageYOffset
+
+        }
+
+        onMounted(() => {
+            lastScrollPosition.value = window.pageYOffset
+            window.addEventListener('scroll', onScroll)
+        })
+
+        onUnmounted(() => {
+            window.removeEventListener('scroll', onScroll)
+        })
 
         return {
             isOpen,
@@ -94,6 +121,8 @@ export default {
                 isOpen.value = true
             },
             t,
+            showNavbar,
+            lastScrollPosition,
         }
     }
 }
