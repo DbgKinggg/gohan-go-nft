@@ -2,28 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* architects-daughter-regular - latin */
 @font-face {
-  font-family: "Architects Daughter";
+  font-family: KNFontMaiYuan;
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
-  src: url("../font/architects-daughter-v17-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../font/architects-daughter-v17-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../font/architects-daughter-v17-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../font/architects-daughter-v17-latin-regular.woff") format("woff"),
-    /* Modern Browsers */
-      url("../font/architects-daughter-v17-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../font/architects-daughter-v17-latin-regular.svg#ArchitectsDaughter")
-      format("svg"); /* Legacy iOS */
+  src: local(""), url("../font/KNFontMaiYuan.ttf") format("truetype"),
+    url("../font/KNFontMaiYuan.otf") format("truetype");
 }
 
 body {
-  font-family: "Architects Daughter", Arial, Helvetica, sans-serif;
+  font-family: KNFontMaiYuan, Arial, Helvetica, sans-serif;
 }

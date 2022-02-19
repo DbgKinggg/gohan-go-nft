@@ -45,7 +45,7 @@
                     <img
                         src="/images/examples/02_no_background.png"
                         alt="GohanGo!!"
-                        class="max-h-80 transform transition hover:scale-105 hover:translate-x-1 hover:translate-y-2"
+                        class="max-h-80 transform transition-all hover:scale-105 hover:translate-x-1 hover:translate-y-2 hover:rotate-6 ease-in-out"
                     />
                 </div>
             </div>

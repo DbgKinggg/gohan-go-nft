@@ -1,7 +1,7 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! 是一个存于Solana链上随机生成的NFT系列。本系列的总数量为8866。每一个GohanGo!! NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
+      "description": "GohanGo!! 是一个Solana链上的随机生成NFT系列。本系列的总数量为8866。每一个GohanGo!! NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
       "tag": "敬请期待"
     },
     "backstories": "从前有只<span class=\"text-orange-300\">猴子</span>他很喜欢吃<span class=\"text-orange-300\">米饭</span>，他的愿望是吃遍世界各地的饭，就像海南鸡饭，咖喱饭，天妇罗盖饭，芒果糯米饭，扬州炒饭，车站便当等等，但是他最喜欢的还是那一碗暖乎乎滴酱油淋白米饭。<br/><br/>如果你也是<span class=\"text-orange-300\">米饭党</span>，快来加入我们吧！",
@@ -88,7 +88,7 @@
   "base": {
     "connectWallet": "连接钱包",
     "warningTitle": "功能还没有上线",
-    "warningMsg": "GohanGo!! NFT 公开发售时你将可以连接你的钱包并且铸造你的NFT，感谢等待！!",
+    "warningMsg": "GohanGo!! NFT 公开发售时你将可以连接你的钱包并且铸造你的NFT，感谢等待！！",
     "close": "关闭"
   }
 }
