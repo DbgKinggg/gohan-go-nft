@@ -4,8 +4,6 @@
             imageSrc="/images/examples/01.jpg"
             :isRight="true"
             titleId="title-one-animation"
-            color="bg-diary-cream"
-            @observe-visibility="visibilityChanged"
         >
             <template v-slot:title>{{ t('home.promo.0.title') }}</template>
             <template v-slot:description>{{ t('home.promo.0.description') }}</template>
@@ -20,8 +18,6 @@
             imageSrc="/images/examples/03.jpg"
             :isRight="false"
             titleId="title-two-animation"
-            color="bg-mischka"
-            @observe-visibility="visibilityChanged"
         >
             <template v-slot:title>{{ t('home.promo.1.title') }}</template>
             <template v-slot:description>{{ t('home.promo.1.description') }}</template>
@@ -34,10 +30,8 @@
         />
         <HomePromoItem
             imageSrc="/images/examples/04.jpg"
-            color="bg-cavern-pink"
             titleId="title-three-animation"
             :isRight="true"
-            @observe-visibility="visibilityChanged"
         >
             <template v-slot:title>{{ t('home.promo.2.title') }}</template>
             <template v-slot:description>{{ t('home.promo.2.description') }}</template>
@@ -59,15 +53,10 @@ export default {
     components: {
         HomePromoItem
     },
-    emits: ['observe-visibility'],
-    setup(props, { emit }) {
+    setup() {
         const { t } = useI18n({ useScope: 'global' })
-        const visibilityChanged = (...args) => {
-            emit('observe-visibility', ...args)
-        }
 
         return {
-            visibilityChanged,
             t
         }
     }

@@ -1,20 +1,17 @@
 <template>
-    <div
-        :class="[bgColour]"
-        class="transition-color duration-1000 ease-in-out selection:bg-sky-600 selection:text-white"
-    >
+    <div class="selection:bg-sky-600 selection:text-white bg-violet">
         <BaseHeader />
-        <HomeMain @observe-visibility="visibilityChanged" />
+        <HomeMain />
         <HomeStory />
-        <HomePromo @observe-visibility="visibilityChanged" />
-        <HomeRoadMap @observe-visibility="visibilityChanged" />
-        <HomeFaq @observe-visibility="visibilityChanged" />
+        <HomePromo />
+        <HomeRoadMap />
+        <HomeFaq />
         <HomeFooter />
     </div>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import BaseHeader from './Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -36,18 +33,7 @@ export default {
         HomeStory,
     },
     setup() {
-        const bgColour = ref('');
         const timeline = gsap.timeline()
-
-        // change page background color
-        const visibilityChanged = (isVisible, entry) => {
-            if (
-                isVisible
-                && entry.target.dataset.color
-            ) {
-                bgColour.value = entry.target.dataset.color
-            }
-        }
 
         gsap.registerPlugin(ScrollTrigger)
 
@@ -101,7 +87,7 @@ export default {
             imageAnimation('#rice-example-3', true)
         })
 
-        return { visibilityChanged, bgColour }
+        return {}
     }
 }
 </script>

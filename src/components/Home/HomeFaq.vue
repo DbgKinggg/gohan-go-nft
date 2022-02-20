@@ -1,9 +1,5 @@
 <template>
-    <div
-        class="pt-2 py-48 px-2 overflow-hidden"
-        data-color="bg-tower-gray"
-        v-observe-visibility="emitVisibility"
-    >
+    <div class="pt-2 py-48 px-2 overflow-hidden">
         <div class="relative w-80 md:w-96 mx-auto mt-24 md:mt-36">
             <img src="/images/shape1.svg" alt="shape" class="object-cover w-full h-full rotate-180" />
             <h2
@@ -41,17 +37,12 @@ export default {
     components: {
         BaseDisclosure,
     },
-    setup(props, { emit }) {
+    setup() {
         const { t } = useI18n({ useScope: 'global' })
-        const emitVisibility = (...args) => {
-            emit('observe-visibility', ...args)
-        }
 
         return {
-            emitVisibility,
             t,
         }
     },
-    emits: ['observe-visibility']
 }
 </script>

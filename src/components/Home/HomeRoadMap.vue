@@ -1,9 +1,5 @@
 <template>
-    <div
-        class="mt-12 md:mt-24 px-3 overflow-hidden"
-        data-color="bg-jet-stream"
-        v-observe-visibility="emitVisibility"
-    >
+    <div class="mt-12 md:mt-24 px-3 overflow-hidden">
         <div class="relative w-80 md:w-96 mx-auto">
             <img src="/images/shape1.svg" alt="shape" class="object-cover w-full h-full rotate-180" />
             <h2
@@ -67,18 +63,12 @@ export default {
         HomeRoadMapLeft,
         HomeRoadMapRight
     },
-    setup(props, { emit }) {
+    setup() {
         const { t } = useI18n({ useScope: 'global' })
 
-        const emitVisibility = (...args) => {
-            emit('observe-visibility', ...args)
-        }
-
         return {
-            emitVisibility,
             t,
         }
     },
-    emits: ['observe-visibility']
 }
 </script>

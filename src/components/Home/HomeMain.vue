@@ -1,43 +1,75 @@
 <template>
-    <div
-        class="grid min-h-screen overflow-hidden relative"
-        data-color="bg-bizarre"
-        v-observe-visibility="emitVisibility"
-    >
+    <div class="grid min-h-screen overflow-hidden relative">
         <img
             src="/images/pinapple.png"
             alt="Pinapple rice"
-            class="absolute w-48 top-12 md:top-24 -left-16 md:left-16 hover:animate-spin"
+            class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:left-16 z-10 hover:animate-spin"
         />
-        <img
-            src="/images/curry_rice.png"
-            alt="Curry rice"
-            class="absolute w-48 bottom-12 md:bottom-24 -right-24 md:right-16 z-10 hover:animate-spin"
-        />
+        <div class="hidden md:block md:absolute w-2/5 h-2/3 bottom-24 right-0 z-20 relative">
+            <img
+                src="/images/gohan_main.png"
+                alt="GohanGo!!"
+                class="z-30 absolute right-12 bottom-96 h-1/2 transform transition-all hover:scale-105 hover:translate-x-1 hover:translate-y-2 hover:rotate-6 ease-in-out"
+            />
+            <img src="/images/earth.png" alt="Earth" class="absolute w-full object-cover" />
+        </div>
         <img src="/images/bubble.png" alt="Angelfish" class="absolute w-full top-1/2 img-animation" />
-        <div class="mt-48 md:m-auto max-w-6xl z-10">
-            <div class="flex flex-col md:flex-row p-12 relative">
-                <img
-                    src="/images/shape2.svg"
-                    alt="shape"
-                    class="absolute top-52 md:top-32 -left-2 md:-left-40 object-cover w-full"
-                />
-                <div class="mt-2 md:w-1/2 max-w-md flex flex-col justify-center m-auto">
-                    <div class="relative w-full">
-                        <img src="/images/shape1.svg" alt="shape" class="object-cover w-full" />
-                        <div
-                            class="absolute top-14 inset-x-0 text-center sm:text-7xl text-6xl uppercase font-black text-river-bed title-animation"
-                        >GohanGo!!</div>
+        <div class="mt-20 md:mt-48 md:m-auto max-w-6xl p-12 z-40">
+            <div class="flex flex-col md:flex-row">
+                <div class="mt-2 max-w-md flex flex-col justify-center md:mr-24">
+                    <div class="text-center mb-12 text-white">
+                        <h1
+                            class="-rotate-12 md:text-8xl text-6xl uppercase font-black title-animation tracking-wide"
+                        >
+                            <span>Go</span>
+                            <span class="text-stroke">han</span>Go!!
+                        </h1>
+                        <h2 class="-rotate-12 text-left ml-12 text-2xl">Be a Rice People</h2>
                     </div>
+                    <div class="hidden md:block">
+                        <div
+                            class="text-xl xl:text-2xl mt-4 text-animation text-white"
+                        >{{ t('home.main.description') }}</div>
+                        <div
+                            class="mt-3 md:mt-5 p-2 w-4/5 bg-nepal shadow-md items-center text-white rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
+                            role="alert"
+                        >
+                            <span
+                                class="flex rounded-full bg-blue-300 uppercase px-2 py-1 text-xs font-bold mr-3"
+                            >New</span>
+                            <span
+                                class="font-semibold mr-2 text-left flex-auto"
+                            >{{ t('home.main.tag') }}</span>
+                            <ChevronRightIcon class="h-5 w-5" />
+                        </div>
+                        <div class="mt-5 flex justify-center space-x-5">
+                            <BaseIconTwitter />
+                            <BaseIconDiscord />
+                        </div>
+                    </div>
+                </div>
+                <div class="md:hidden h-96 relative mt-24 px-0 mx-0">
+                    <img
+                        src="/images/gohan_main.png"
+                        alt="GohanGo!!"
+                        class="absolute -inset-y-20 -right-8 z-20 h-2/3 transform transition-all hover:scale-105 hover:translate-x-1 hover:translate-y-2 hover:rotate-6 ease-in-out"
+                    />
+                    <img
+                        src="/images/earth.png"
+                        alt="Earth"
+                        class="absolute w-full max-h-96 inset-y-12 object-cover -right-12"
+                    />
+                </div>
+                <div class="block md:hidden mt-20">
                     <div
-                        class="text-xl xl:text-2xl mt-4 text-animation text-tuna"
+                        class="text-xl xl:text-2xl mt-4 text-animation text-white"
                     >{{ t('home.main.description') }}</div>
                     <div
-                        class="mt-3 md:mt-5 p-2 bg-jet-stream shadow-md items-center text-white rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
+                        class="mt-3 md:mt-5 p-2 bg-nepal shadow-md items-center text-white rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
                         role="alert"
                     >
                         <span
-                            class="flex rounded-full bg-tower-gray uppercase px-2 py-1 text-xs font-bold mr-3"
+                            class="flex rounded-full bg-blue-300 uppercase px-2 py-1 text-xs font-bold mr-3"
                         >New</span>
                         <span
                             class="font-semibold mr-2 text-left flex-auto"
@@ -48,13 +80,6 @@
                         <BaseIconTwitter />
                         <BaseIconDiscord />
                     </div>
-                </div>
-                <div class="flex md:justify-end justify-center w-full mt-5 md:w-1/2 md:my-auto">
-                    <img
-                        src="/images/examples/02_no_background.png"
-                        alt="GohanGo!!"
-                        class="max-h-80 transform transition-all hover:scale-105 hover:translate-x-1 hover:translate-y-2 hover:rotate-6 ease-in-out"
-                    />
                 </div>
             </div>
         </div>
@@ -73,17 +98,20 @@ export default {
         BaseIconTwitter,
         BaseIconDiscord,
     },
-    setup(props, { emit }) {
+    setup() {
         const { t } = useI18n({ useScope: 'global' })
-        const emitVisibility = (...args) => {
-            emit('observe-visibility', ...args)
-        }
-
         return {
-            emitVisibility,
             t,
         }
     },
-    emits: ['observe-visibility']
 }
 </script>
+
+<style scoped>
+.text-stroke {
+    color: white;
+    -webkit-text-fill-color: #0a0d34; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+</style>

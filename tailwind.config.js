@@ -13,6 +13,8 @@ module.exports = {
         mischka: "#ccd2de",
         "river-bed": "#40485b",
         tuna: "#353744",
+        violet: "#0a0d34",
+        nepal: "#8babc2",
       },
     },
   },
