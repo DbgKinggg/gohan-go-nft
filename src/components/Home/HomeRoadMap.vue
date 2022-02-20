@@ -1,8 +1,15 @@
 <template>
     <div class="mt-12 md:mt-24 max-w-4xl mx-auto px-3 overflow-hidden">
-        <h2
-            class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-nepal"
-        >{{ t('home.roadmap.title') }}</h2>
+        <div class="relative py-12">
+            <img
+                src="/images/logo_empty.png"
+                alt="Title background"
+                class="absolute inset-0 mx-auto h-44"
+            />
+            <h2
+                class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-nepal"
+            >{{ t('home.roadmap.title') }}</h2>
+        </div>
         <section class="max-w-5xl mx-auto py-10">
             <div>
                 <HomeRoadMapLeft

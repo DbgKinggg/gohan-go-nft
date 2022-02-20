@@ -1,6 +1,13 @@
 <template>
-    <div class="pt-2 md:mt-24 pb-24 px-3 overflow-hidden">
-        <h2 class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-nepal">FAQ</h2>
+    <div class="pt-24 pb-24 px-3 overflow-hidden">
+        <div class="relative py-12">
+            <img
+                src="/images/logo_empty.png"
+                alt="Title background"
+                class="absolute inset-0 mx-auto h-44"
+            />
+            <h2 class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-nepal">FAQ</h2>
+        </div>
         <div
             class="w-full max-w-2xl p-2 mx-auto mt-12 text-md bg-river-bed/80 rounded-2xl space-y-2"
         >

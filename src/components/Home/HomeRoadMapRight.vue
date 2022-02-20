@@ -16,7 +16,7 @@
         >
             <div class="flex md:flex-row flex-col items-center">
                 <div class="flex-auto">
-                    <div class="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-orange-300">
+                    <div class="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-nepal">
                         <span class="font-black">{{ step }}</span>
                         - {{ title }}
                     </div>

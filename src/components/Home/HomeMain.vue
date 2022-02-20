@@ -24,7 +24,7 @@
                             <span>Go</span>
                             <span class="text-stroke">han</span>Go!!
                         </h1>
-                        <h2 class="-rotate-12 text-left ml-12 text-2xl">Be a Rice People</h2>
+                        <h2 class="-rotate-12 text-left ml-12 text-2xl">Be a Rice Person</h2>
                     </div>
                     <div class="hidden md:block">
                         <div

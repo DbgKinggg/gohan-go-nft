@@ -1,10 +1,6 @@
 
 <template>
-    <div
-        class="h-2/3 flex relative mt-5 md:mt-32"
-        :data-color="color"
-        v-observe-visibility="emitVisibility"
-    >
+    <div class="h-2/3 flex relative mt-5 md:mt-32">
         <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32 max-w-7xl">
             <div
                 class="mx-auto p-5 w-auto lg:w-3/5 lg:col-span-2"
@@ -47,11 +43,7 @@ export default {
         },
         titleId: String
     },
-    setup(props, { emit }) {
-        const emitVisibility = (...args) => {
-            emit('observe-visibility', ...args)
-        }
-
+    setup() {
         const rightImgWrapperClasses = 'md:mr-0 md:ml-auto'
         const leftImgWrapperClasses = 'md:ml-0 md:mr-auto'
         const rightImgClasses = 'ml-auto'
@@ -62,7 +54,6 @@ export default {
         const leftTitleClasses = 'md:text-right md:-mr-32'
 
         return {
-            emitVisibility,
             rightImgClasses,
             leftImgClasses,
             rightTextClasses,
@@ -73,6 +64,5 @@ export default {
             leftImgWrapperClasses
         }
     },
-    emits: ['observe-visibility']
 }
 </script>

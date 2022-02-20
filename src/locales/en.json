@@ -67,6 +67,20 @@
         }
       ]
     },
+    "team": {
+      "name": "Team",
+      "members": [
+        {
+          "role": "Designer"
+        },
+        {
+          "role": "Community Manager"
+        },
+        {
+          "role": "Developer"
+        }
+      ]
+    },
     "faq": {
       "name": "FAQ",
       "questions": [
