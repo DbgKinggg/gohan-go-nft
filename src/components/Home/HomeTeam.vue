@@ -12,17 +12,17 @@
         </div>
         <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <HomeTeamItem
-                image="/images/team/hiroki.jpg"
+                image="/images/team/hiroki.png"
                 member-name="Hiroki"
                 :role="t('home.team.members.0.role')"
             />
             <HomeTeamItem
-                image="/images/team/ahjo.jpg"
+                image="/images/team/ahjo.png"
                 member-name="AhJo"
                 :role="t('home.team.members.1.role')"
             />
             <HomeTeamItem
-                image="/images/team/sammie.jpg"
+                image="/images/team/sammie.png"
                 member-name="Sammie"
                 :role="t('home.team.members.2.role')"
             />

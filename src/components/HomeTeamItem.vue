@@ -4,8 +4,8 @@
     >
         <div>
             <img
+                v-lazy="{ src: image }"
                 class="object-center object-cover h-auto w-full group-hover:scale-105 transform ease-in-out transition duration-300"
-                :src="image"
                 :alt="memberName"
             />
         </div>

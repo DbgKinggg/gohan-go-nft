@@ -13,7 +13,7 @@
             />
             <img src="/images/earth.png" alt="Earth" class="absolute w-full object-cover" />
         </div>
-        <img src="/images/bubble.png" alt="Angelfish" class="absolute w-full top-1/2 img-animation" />
+        <img src="/images/bubble.png" alt="Bubble" class="absolute w-full top-1/2 img-animation" />
         <div class="mt-20 md:mt-48 md:m-auto max-w-6xl p-12 z-40">
             <div class="flex flex-col md:flex-row">
                 <div class="mt-2 max-w-md flex flex-col justify-center md:mr-24">
