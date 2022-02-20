@@ -5,7 +5,7 @@
         :data-color="color"
         v-observe-visibility="emitVisibility"
     >
-        <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32">
+        <div class="m-auto grid md:grid-cols-2 lg:grid-cols-3 lg:px-32 max-w-7xl">
             <div
                 class="mx-auto p-5 w-auto lg:w-3/5 lg:col-span-2"
                 :class="isRight ? rightImgWrapperClasses : leftImgWrapperClasses"

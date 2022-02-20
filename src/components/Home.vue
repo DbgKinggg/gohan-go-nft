@@ -7,6 +7,7 @@
         <HomeStory />
         <HomePromo />
         <HomeRoadMap />
+        <HomeTeam />
         <HomeFaq />
         <HomeFooter />
     </div>
@@ -23,6 +24,7 @@ import HomeMain from './Home/HomeMain.vue'
 import HomeStory from './Home/HomeStory.vue'
 import HomeFooter from './Home/HomeFooter.vue'
 import HomePromo from './Home/HomePromo.vue'
+import HomeTeam from './Home/HomeTeam.vue'
 
 export default {
     components: {
@@ -33,6 +35,7 @@ export default {
         HomeFooter,
         HomePromo,
         HomeStory,
+        HomeTeam,
     },
     setup() {
         const timeline = gsap.timeline()

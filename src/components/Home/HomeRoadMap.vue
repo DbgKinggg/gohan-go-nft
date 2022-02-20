@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-12 md:mt-24 px-3 overflow-hidden">
+    <div class="mt-12 md:mt-24 max-w-4xl mx-auto px-3 overflow-hidden">
         <h2
             class="md:text-7xl text-6xl uppercase font-black p-3 text-center text-nepal"
         >{{ t('home.roadmap.title') }}</h2>
