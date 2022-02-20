@@ -1,5 +1,7 @@
 <template>
-    <div class="selection:bg-sky-600 selection:text-white bg-violet">
+    <div
+        class="transition-color duration-1000 ease-in-out selection:bg-sky-600 selection:text-white bg-violet"
+    >
         <BaseHeader />
         <HomeMain />
         <HomeStory />
@@ -11,7 +13,7 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import BaseHeader from './Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"

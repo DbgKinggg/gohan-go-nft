@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden mt-12">
         <HomePromoItem
             imageSrc="/images/examples/01.jpg"
             :isRight="true"

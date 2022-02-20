@@ -9,7 +9,7 @@
             <img
                 src="/images/gohan_main.png"
                 alt="GohanGo!!"
-                class="z-30 absolute right-12 bottom-96 h-1/2 transform transition-all hover:scale-105 hover:translate-x-1 hover:translate-y-2 hover:rotate-6 ease-in-out"
+                class="z-30 absolute right-12 bottom-96 h-1/2 transform transition-all hover:animate-bounce ease-in-out"
             />
             <img src="/images/earth.png" alt="Earth" class="absolute w-full object-cover" />
         </div>
@@ -19,7 +19,7 @@
                 <div class="mt-2 max-w-md flex flex-col justify-center md:mr-24">
                     <div class="text-center mb-12 text-white">
                         <h1
-                            class="-rotate-12 md:text-8xl text-6xl uppercase font-black title-animation tracking-wide"
+                            class="-rotate-12 md:text-8xl text-7xl uppercase font-black title-animation tracking-wide"
                         >
                             <span>Go</span>
                             <span class="text-stroke">han</span>Go!!
