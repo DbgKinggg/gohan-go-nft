@@ -3,7 +3,7 @@
         class="fixed top-5 w-full z-50 flex justify-between px-1 justify-items-center"
         :class="{ 'invisible': !showNavbar }"
     >
-        <img src="/images/logo.png" ref="Logo" class="h-8 md:h-12" />
+        <img src="/images/logo.png" alt="Logo" class="h-8 md:h-12" />
         <div class="px-3 space-x-3">
             <HomeLocaleSelect />
             <button
