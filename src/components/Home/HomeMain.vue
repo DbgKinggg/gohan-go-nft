@@ -45,6 +45,7 @@
                         <div class="mt-5 flex justify-center space-x-5">
                             <BaseIconTwitter />
                             <BaseIconDiscord />
+                            <RaritySniper />
                         </div>
                     </div>
                 </div>
@@ -79,6 +80,7 @@
                     <div class="mt-5 flex justify-center space-x-5">
                         <BaseIconTwitter />
                         <BaseIconDiscord />
+                        <RaritySniper />
                     </div>
                 </div>
             </div>
@@ -90,6 +92,7 @@
 import { ChevronRightIcon } from '@heroicons/vue/solid'
 import BaseIconTwitter from '../Base/Icon/BaseIconTwitter.vue'
 import BaseIconDiscord from '../Base/Icon/BaseIconDiscord.vue'
+import RaritySniper from '../Base/Icon/RaritySniper.vue'
 import { useI18n } from 'vue-i18n'
 
 export default {
@@ -97,6 +100,7 @@ export default {
         ChevronRightIcon,
         BaseIconTwitter,
         BaseIconDiscord,
+        RaritySniper,
     },
     setup() {
         const { t } = useI18n({ useScope: 'global' })
