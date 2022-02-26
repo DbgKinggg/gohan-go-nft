@@ -17,8 +17,8 @@
                 :role="t('home.team.members.0.role')"
             />
             <HomeTeamItem
-                image="/images/team/ahjo.png"
-                member-name="AhJo"
+                image="/images/team/eevee.png"
+                member-name="Eevee"
                 :role="t('home.team.members.1.role')"
             />
             <HomeTeamItem
