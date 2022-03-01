@@ -85,10 +85,6 @@ export default {
             {
                 'name': '繁體中文',
                 'value': 'zh_Hant'
-            },
-            {
-                'name': '日本語',
-                'value': 'ja'
             }
         ];
 
