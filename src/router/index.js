@@ -1,43 +1,26 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "../components/Home.vue";
+import Home from "../views/Home.vue";
+import { createWebHistory } from "vue-router";
+import { createLangRouter } from "vue-lang-router";
 
-let defaultLocale = "en";
+import translations from "../lang/translations";
 
-const createAppRouter = ($i18n) => {
-  return createRouter({
-    history: createWebHistory(),
-    routes: [
-      {
-        path: "/",
-        name: "root",
-        component: Home,
-      },
-      {
-        path: "/:locale",
-        component: Home,
-        beforeEnter: (to, from, next) => {
-          const urlLocale = to.params.locale.toString();
-          const supportedLocales = ["en", "ja", "zh_Hans", "zh_Hant"];
+const routes = [
+  {
+    path: "/",
+    name: "root",
+    component: Home,
+  },
+];
 
-          // redirect to default locale
-          if (!supportedLocales.includes(urlLocale)) return next(defaultLocale);
-
-          if (defaultLocale !== urlLocale) {
-            $i18n.global.locale.value = urlLocale;
-          }
-
-          return next();
-        },
-        children: [
-          {
-            path: "",
-            name: "home",
-            component: Home,
-          },
-        ],
-      },
-    ],
-  });
+const langRouterOptions = {
+  defaultLanguage: "en",
+  translations,
+};
+const routerOptions = {
+  routes,
+  history: createWebHistory(),
 };
 
-export { createAppRouter, defaultLocale };
+const router = createLangRouter(langRouterOptions, routerOptions);
+
+export default router;

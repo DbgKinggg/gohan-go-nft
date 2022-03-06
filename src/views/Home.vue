@@ -15,16 +15,16 @@
 
 <script>
 import { ref, onMounted } from 'vue'
-import BaseHeader from './Base/BaseHeader.vue'
+import BaseHeader from '../components/Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import HomeRoadMap from './Home/HomeRoadMap.vue'
-import HomeFaq from './Home/HomeFaq.vue'
-import HomeMain from './Home/HomeMain.vue'
-import HomeStory from './Home/HomeStory.vue'
-import HomeFooter from './Home/HomeFooter.vue'
-import HomePromo from './Home/HomePromo.vue'
-import HomeTeam from './Home/HomeTeam.vue'
+import HomeRoadMap from '../components/Home/HomeRoadMap.vue'
+import HomeFaq from '../components/Home/HomeFaq.vue'
+import HomeMain from '../components/Home/HomeMain.vue'
+import HomeStory from '../components/Home/HomeStory.vue'
+import HomeFooter from '../components/Home/HomeFooter.vue'
+import HomePromo from '../components/Home/HomePromo.vue'
+import HomeTeam from '../components/Home/HomeTeam.vue'
 
 export default {
     components: {
