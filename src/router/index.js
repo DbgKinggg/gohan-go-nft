@@ -12,6 +12,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/maker",
+    name: "maker",
+    component: Maker,
+  },
+  {
     path: "/:catchAll(.*)",
     component: NotFound,
   },

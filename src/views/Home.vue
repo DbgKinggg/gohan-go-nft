@@ -2,7 +2,7 @@
     <div
         class="transition-color duration-1000 ease-in-out selection:bg-sky-600 selection:text-white bg-violet"
     >
-        <BaseHeader />
+        <BaseSideDrawer />
         <HomeMain />
         <HomeStory />
         <HomePromo />
@@ -15,7 +15,6 @@
 
 <script>
 import { onMounted } from 'vue'
-import BaseHeader from '../components/Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import HomeRoadMap from '../components/Home/HomeRoadMap.vue'
@@ -25,10 +24,10 @@ import HomeStory from '../components/Home/HomeStory.vue'
 import HomeFooter from '../components/Home/HomeFooter.vue'
 import HomePromo from '../components/Home/HomePromo.vue'
 import HomeTeam from '../components/Home/HomeTeam.vue'
+import BaseSideDrawer from '../components/Base/BaseSideDrawer.vue'
 
 export default {
     components: {
-        BaseHeader,
         HomeRoadMap,
         HomeFaq,
         HomeMain,
@@ -36,6 +35,7 @@ export default {
         HomePromo,
         HomeStory,
         HomeTeam,
+        BaseSideDrawer,
     },
     setup() {
         const timeline = gsap.timeline()
