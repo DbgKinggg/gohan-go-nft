@@ -104,5 +104,8 @@
     "warningTitle": "功能還沒有上線",
     "warningMsg": "GohanGo!! NFT 公開發售時你將可以連接你的錢包並且鑄造你的NFT，感謝等待！！",
     "close": "關閉"
+  },
+  "error": {
+    "pageNotFound": "沒找到頁面喲"
   }
 }

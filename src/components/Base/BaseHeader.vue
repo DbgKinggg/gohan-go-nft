@@ -3,15 +3,18 @@
         class="fixed top-5 w-full z-50 flex justify-between px-1 justify-items-center"
         :class="{ 'invisible': !showNavbar }"
     >
-        <img src="/images/logo.png" alt="Logo" class="h-8 md:h-12" />
+        <localized-link to="/">
+            <img src="/images/logo.png" alt="Logo" class="h-8 md:h-12" />
+        </localized-link>
         <div class="px-3 space-x-3">
             <HomeLocaleSelect />
             <button
+                v-if="showConnectWallet"
                 @click="openModal"
                 class="p-3 shadow-md text-sm md:text-base bg-white hover:bg-gray-200 active:bg-gray-300 rounded-3xl hover:-translate-y-0.5 transform transition focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:outline-none focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500"
                 type="button"
             >{{ t('base.connectWallet') }}</button>
-            <TransitionRoot appear :show="isOpen" as="template">
+            <TransitionRoot appear :show="isOpen" as="template" v-if="showConnectWallet">
                 <Dialog as="div" @close="closeModal">
                     <div class="fixed inset-0 z-50 overflow-y-auto">
                         <div class="min-h-screen px-4 text-center">
@@ -89,6 +92,12 @@ export default {
         Dialog,
         DialogOverlay,
         DialogTitle,
+    },
+    props: {
+        showConnectWallet: {
+            type: Boolean,
+            default: true
+        }
     },
     setup() {
         const { t } = useI18n({ useScope: 'global' })

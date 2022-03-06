@@ -108,5 +108,8 @@
     "warningTitle": "Please come back later",
     "warningMsg": "You will be able to connect your wallet and mint your GohanGo!! NFT when mint is live, thanks!",
     "close": "Close"
+  },
+  "error": {
+    "pageNotFound": "This page could not be found"
   }
 }

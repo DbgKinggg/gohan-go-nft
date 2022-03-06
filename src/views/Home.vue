@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import BaseHeader from '../components/Base/BaseHeader.vue'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"

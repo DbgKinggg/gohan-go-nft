@@ -104,5 +104,8 @@
     "warningTitle": "功能还没有上线",
     "warningMsg": "GohanGo!! NFT 公开发售时你将可以连接你的钱包并且铸造你的NFT，感谢等待！！",
     "close": "关闭"
+  },
+  "error": {
+    "pageNotFound": "没找到页面哟"
   }
 }

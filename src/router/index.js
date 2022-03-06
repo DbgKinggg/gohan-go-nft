@@ -1,7 +1,8 @@
 import Home from "../views/Home.vue";
+import Maker from "../views/Maker.vue";
+import NotFound from "../views/NotFound.vue";
 import { createWebHistory } from "vue-router";
 import { createLangRouter } from "vue-lang-router";
-
 import translations from "../lang/translations";
 
 const routes = [
@@ -9,6 +10,10 @@ const routes = [
     path: "/",
     name: "root",
     component: Home,
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: NotFound,
   },
 ];
 
