@@ -3,7 +3,9 @@
         <BaseSideDrawer :showConnectWallet="false" />
         <div class="min-h-screen bg-violet flex">
             <div class="m-auto">
-                <div class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white"></div>
+                <div class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white relative">
+                    <div class="w-full h-full" v-html="svgContent" />
+                </div>
                 <div class="flex mt-12 justify-between">
                     <button type="button">
                         <span
@@ -27,6 +29,8 @@
 import BaseSideDrawer from '../components/Base/BaseSideDrawer.vue'
 import MakerSideDrawer from '../components/Maker/MakerSideDrawer.vue'
 import MakerBottomMenu from '../components/Maker/MakerBottomMenu.vue'
+import { ref } from 'vue'
+import { LAYERS } from '../utils/Maker/variables'
 
 export default {
     components: {
@@ -35,7 +39,15 @@ export default {
         MakerBottomMenu,
     },
     setup() {
+        const svgContent = ref('')
 
+        svgContent.value += `<img src="/images/maker/Layers/Body/body.png" class="absolute inset-0 w-full" />`
+        svgContent.value += `<img src="/images/maker/Layers/Face/01.png" class="absolute inset-0" />`
+
+        return {
+            svgContent,
+
+        }
     },
 }
 </script>
