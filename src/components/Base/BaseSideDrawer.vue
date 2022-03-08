@@ -6,7 +6,7 @@
             class="fixed top-0 left-0 h-screen w-screen z-50"
             @click="toggle()"
         ></div>
-        <BaseHeader @toggle-menu="toggle" />
+        <BaseHeader @toggle-menu="toggle" :showConnectWallet="showConnectWallet" />
         <nav
             :class="isOpen ? 'translate-x-0' : '-translate-x-[100%]'"
             class="transition transform ease-out duration-300 w-64 fixed overflow-x-scroll bg-nepal top-0 h-screen z-50"
@@ -21,7 +21,7 @@
                 <li class="my-8">
                     <localized-link to="/maker">{{ t('base.maker') }}</localized-link>
                 </li>
-                <li class="my-8">
+                <li class="my-8" v-if="showConnectWallet">
                     <BaseConnectWallet />
                 </li>
             </ul>
@@ -41,6 +41,12 @@ export default {
         BaseConnectWallet,
     },
     name: "Side Drawer",
+    props: {
+        showConnectWallet: {
+            type: Boolean,
+            default: true
+        }
+    },
     setup() {
         const isOpen = ref(false)
         const { t } = useI18n({ useScope: 'global' })

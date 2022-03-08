@@ -117,12 +117,22 @@ export default {
         )
 
         const route = useRoute();
-        const getNewUrl = (rawUrl, locale) => {
-            const findIndex = rawUrl.indexOf("/", rawUrl.indexOf("/") + 1)
-            let newUrl = '/' + locale
 
-            if (findIndex !== -1) {
-                newUrl += rawUrl.substr(findIndex)
+        // get the new url without reloading the page
+        const getNewUrl = (rawUrl, locale) => {
+            // find all indices
+            const slashIndices = []
+            for (let i = 0; i < rawUrl.length; i++) {
+                if (rawUrl[i] == "/") {
+                    slashIndices.push(i)
+                }
+            }
+
+            let newUrl = '/' + locale
+            if (slashIndices.length === 1) { // this is the default language
+                newUrl += rawUrl.substr(slashIndices[0])
+            } else if (slashIndices.length > 1) { // use the last index
+                newUrl += rawUrl.substr(slashIndices.pop())
             }
 
             history.pushState(

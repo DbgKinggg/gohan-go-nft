@@ -1,6 +1,7 @@
 {
   "name": "gohango",
   "version": "0.0.0",
+  "author": "DbgKing<dbgking@163.com> (https://gohango.art)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
