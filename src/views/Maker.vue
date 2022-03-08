@@ -1,7 +1,6 @@
 <template>
     <div>
         <BaseSideDrawer :showConnectWallet="false" />
-        <MakerSideDrawer />
         <div class="min-h-screen bg-violet flex">
             <div class="m-auto">
                 <div class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white"></div>
@@ -19,17 +18,21 @@
                 </div>
             </div>
         </div>
+        <MakerSideDrawer />
+        <MakerBottomMenu />
     </div>
 </template>
 
 <script>
 import BaseSideDrawer from '../components/Base/BaseSideDrawer.vue'
 import MakerSideDrawer from '../components/Maker/MakerSideDrawer.vue'
+import MakerBottomMenu from '../components/Maker/MakerBottomMenu.vue'
 
 export default {
     components: {
         BaseSideDrawer,
         MakerSideDrawer,
+        MakerBottomMenu,
     },
     setup() {
 

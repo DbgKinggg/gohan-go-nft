@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-0 right-0">
+    <div class="top-0 right-0 fixed" :class="isOpen ? '' : 'hidden lg:inline-block'">
         <div
             class="relative transition transform ease-out duration-300"
             :class="isOpen ? '' : 'translate-x-[100%]'"
