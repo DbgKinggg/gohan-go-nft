@@ -7,7 +7,7 @@
             <nav class="h-48 bg-indigo-500 w-screen p-2">
                 <TabGroup class="h-full" as="div">
                     <TabList
-                        class="flex p-1 space-x-1 bg-indigo-900/20 rounded-3xl overflow-x-scroll"
+                        class="flex p-1 space-x-1 bg-indigo-900/20 rounded-3xl overflow-x-scroll snap-x"
                     >
                         <Tab
                             v-for="layer in Object.keys(LAYERS)"
@@ -17,7 +17,7 @@
                         >
                             <button
                                 :class="[
-                                    'w-full px-3 py-2.5 text-sm leading-5 font-medium text-indigo-700 rounded-3xl',
+                                    'w-full px-3 py-2.5 text-sm leading-5 font-medium text-indigo-700 rounded-3xl snap-start',
                                     'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60',
                                     selected
                                         ? 'bg-white shadow'
@@ -29,66 +29,31 @@
 
                     <TabPanels class="mt-2 h-28">
                         <TabPanel
-                            v-for="(layer, idx) in Object.values(LAYERS)"
-                            :key="idx"
+                            v-for="(layer, layerName) in LAYERS"
+                            :key="layerName"
                             :class="[
                                 'bg-indigo-900/20 rounded-3xl',
                             ]"
                         >
-                            <div class="flex flex-row space-x-3 overflow-x-scroll p-3 snap-x">
+                            <div
+                                class="flex flex-row space-x-3 overflow-x-scroll p-3 justify-start"
+                            >
                                 <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 bg-white/30 snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
+                                    class="aspect-square h-24 w-24 my-auto rounded-3xl p-1 bg-white/30 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
                                 >
                                     <img
-                                        src="/images/maker/Layers/Body/body.png"
+                                        src="/images/maker/Layers/Body/body_no_face.png"
                                         class="object-cover"
                                     />
                                 </div>
                                 <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
+                                    class="aspect-square h-24 w-24 my-auto rounded-3xl p-1 hover:bg-white/[0.12] focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
+                                    v-for="item in layer.list"
+                                    :key="item"
+                                    @click="changeTrait(layer.name, item)"
                                 >
                                     <img
-                                        src="/images/maker/Layers/Body/body.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
-                                    class="aspect-square h-24 w-24 m-auto rounded-3xl p-1 hover:bg-white/[0.12] snap-start focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body.png"
+                                        :src="`/images/maker/Layers/${layerName}/${item}.png`"
                                         class="object-cover"
                                     />
                                 </div>
@@ -140,12 +105,17 @@ export default {
             'test2'
         ]
 
+        const changeTrait = (layer, itemName) => {
+            console.log(layer, itemName)
+        }
+
         return {
             isOpen,
             toggle,
             t,
             list,
             LAYERS,
+            changeTrait
         }
     },
 }
