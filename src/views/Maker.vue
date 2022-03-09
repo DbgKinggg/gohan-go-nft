@@ -3,7 +3,9 @@
         <BaseSideDrawer :showConnectWallet="false" />
         <div class="min-h-screen bg-violet flex">
             <div class="m-auto">
-                <div class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white relative">
+                <div
+                    class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white relative shadow-md shadow-indigo-800"
+                >
                     <div class="w-full h-full" v-html="svgContent" />
                 </div>
                 <div class="flex mt-12 justify-between">
