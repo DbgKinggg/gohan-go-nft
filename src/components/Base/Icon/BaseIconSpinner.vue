@@ -1,6 +1,6 @@
 <template>
     <svg
-        class="animate-spin h-5 w-5"
+        class="animate-spin w-5 h-5"
         :class="extraClasses"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

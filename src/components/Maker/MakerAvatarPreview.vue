@@ -1,8 +1,8 @@
 <template>
     <div
-        class="avatar-preview w-[280px] h-[280px] rounded-3xl relative shadow-md shadow-indigo-800"
+        class="avatar-preview w-[280px] h-[280px] rounded-3xl relative overflow-hidden shadow-md shadow-indigo-800"
     >
-        <div class="w-full h-full" v-html="avatarHtml" />
+        <div class="w-full h-full" v-html="avatarHtml" :class="backgroundColor" />
     </div>
 </template>
 
@@ -22,7 +22,7 @@ store.commit('maker/setAvatarOptions', {
         class: "z-50",
         name: "face",
         item: "01"
-    }
+    },
 })
 
 const avatarHtml = computed(() => {
@@ -33,4 +33,6 @@ const avatarHtml = computed(() => {
     }
     return html
 })
+
+const backgroundColor = computed(() => store.state.maker.background)
 </script>

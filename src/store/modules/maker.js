@@ -2,6 +2,7 @@ import { SCREEN, LAYERS } from "../../utils/Maker/variables";
 
 const state = {
   avatarOptions: [],
+  background: "bg-white", // default white
   showSideBar: window.innerWidth > SCREEN.lg,
 };
 
@@ -14,6 +15,9 @@ const mutations = {
   },
   removeLayer(state, layer) {
     delete state.avatarOptions[layer];
+  },
+  changeBackground(state, color) {
+    state.background = color;
   },
 };
 

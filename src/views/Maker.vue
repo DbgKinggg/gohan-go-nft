@@ -5,23 +5,31 @@
             <div class="m-auto">
                 <MakerAvatarPreview ref="avatarPreviewEle" />
                 <div class="flex justify-between py-12">
-                    <button type="button">
-                        <span
-                            class="transition transform rounded-3xl text-sm md:text-base bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-4 border-b-4 border-indigo-800 hover:border-indigo-500 hover:border-b-2 active:border-b-0 active:bg-indigo-800"
-                        >Randomize</span>
+                    <button
+                        type="button"
+                        class="transition transform rounded-3xl text-sm md:text-base bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-4 border-b-4 border-indigo-800 hover:border-indigo-500 hover:border-b-2 active:border-b-0 active:bg-indigo-800"
+                        @click="randomizeAvatar"
+                    >
+                        <SparklesIcon class="w-5 h-5 mr-2 inline-block" />
+                        <span>Randomize</span>
                     </button>
                     <button
                         v-if="downloading"
                         type="button"
-                        class="rounded-3xl text-sm md:text-base bg-indigo-800 text-white font-bold py-3 px-4 flex"
+                        class="rounded-3xl text-sm md:text-base bg-indigo-800 text-white font-bold py-3 px-4"
                         disable
                     >
-                        <BaseIconSpinner extraClasses="mr-2 text-white" />Downloading
+                        <BaseIconSpinner extraClasses="mr-2 inline-block text-white" />
+                        <span>Downloading</span>
                     </button>
-                    <button type="button" @click="downloadImg" v-else>
-                        <span
-                            class="transition transform rounded-3xl text-sm md:text-base bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-4 border-b-4 border-indigo-800 hover:border-indigo-500 hover:border-b-2 active:border-b-0 active:bg-indigo-800"
-                        >Download</span>
+                    <button
+                        type="button"
+                        @click="downloadImg"
+                        class="transition transform rounded-3xl text-sm md:text-base bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-4 border-b-4 border-indigo-800 hover:border-indigo-500 hover:border-b-2 active:border-b-0 active:bg-indigo-800"
+                        v-else
+                    >
+                        <DocumentDownloadIcon class="w-5 h-5 mr-2 inline-block" />
+                        <span>Download</span>
                     </button>
                 </div>
             </div>
@@ -38,7 +46,9 @@ import MakerBottomMenu from '../components/Maker/MakerBottomMenu.vue'
 import MakerAvatarPreview from '../components/Maker/MakerAvatarPreview.vue'
 import BaseIconSpinner from '../components/Base/Icon/BaseIconSpinner.vue'
 import { ref } from 'vue'
-import { LAYERS } from '../utils/Maker/variables'
+import { LAYERS, BACKGROUNDS } from '../utils/Maker/variables'
+import { SparklesIcon, DocumentDownloadIcon } from '@heroicons/vue/solid'
+import { useStore } from 'vuex'
 
 export default {
     components: {
@@ -47,10 +57,13 @@ export default {
         MakerBottomMenu,
         MakerAvatarPreview,
         BaseIconSpinner,
+        SparklesIcon,
+        DocumentDownloadIcon,
     },
     setup() {
         const downloading = ref(false)
         const avatarPreviewEle = ref(null)
+        const store = useStore()
 
         async function downloadImg() {
             try {
@@ -92,11 +105,39 @@ export default {
             }
         }
 
+        const randomSelectItem = (items) => {
+            return items[items.length * Math.random() | 0]
+        }
+
+        const randomizeAvatar = async () => {
+            let avatarOptions = {};
+            for (const layerName in LAYERS) {
+                const layer = LAYERS[layerName]
+                const list = layer.list
+
+                avatarOptions[layerName] = {
+                    class: layer.class,
+                    name: layer.name,
+                    item: await randomSelectItem(list),
+                }
+            }
+
+            store.commit(
+                'maker/setAvatarOptions',
+                avatarOptions
+            )
+
+            store.commit(
+                'maker/changeBackground',
+                randomSelectItem(BACKGROUNDS)
+            )
+        }
 
         return {
             downloadImg,
             downloading,
             avatarPreviewEle,
+            randomizeAvatar,
         }
     },
 }
