@@ -12,10 +12,13 @@ const mutations = {
   replaceAvatarOption(state, { layer, avatarOption }) {
     state.avatarOptions[layer] = avatarOption;
   },
+  removeLayer(state, layer) {
+    delete state.avatarOptions[layer];
+  },
 };
 
 const actions = {
-  async replaceAvatarOption({ commit }, { layer, itemName }) {
+  replaceAvatarOption({ commit }, { layer, itemName }) {
     if (!LAYERS[layer]) {
       return;
     }
@@ -33,6 +36,17 @@ const actions = {
         item: itemName,
       },
     });
+  },
+  removeLayer({ commit }, layer) {
+    if (!LAYERS[layer]) {
+      return;
+    }
+
+    if (LAYERS[layer].required) {
+      return;
+    }
+
+    commit("removeLayer", layer);
   },
 };
 

@@ -42,7 +42,7 @@
                                     class="aspect-square h-24 w-24 my-auto rounded-3xl p-1 hover:bg-white/[0.12] focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
                                     v-for="item in layer.list"
                                     :key="item"
-                                    @click="changeTrait(layerName, item)"
+                                    @click="changeTrait(layerName, item, item === avatarOptions?.[layerName]?.item)"
                                     :class="
                                         item === avatarOptions?.[layerName]?.item ? 'bg-white/30' : ''
                                     "
@@ -98,14 +98,21 @@ export default {
             isOpen.value = !isOpen.value
         }
 
-        const changeTrait = (layer, itemName) => {
-            store.dispatch(
-                'maker/replaceAvatarOption',
-                {
-                    layer,
-                    itemName
-                }
-            )
+        const changeTrait = (layer, itemName, hasBeenSelected) => {
+            if (hasBeenSelected) {
+                store.dispatch(
+                    'maker/removeLayer',
+                    layer
+                )
+            } else {
+                store.dispatch(
+                    'maker/replaceAvatarOption',
+                    {
+                        layer,
+                        itemName
+                    }
+                )
+            }
         }
 
         return {

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="avatar-preview w-[280px] h-[280px] rounded-3xl bg-white relative shadow-md shadow-indigo-800"
+        class="avatar-preview w-[280px] h-[280px] rounded-3xl relative shadow-md shadow-indigo-800"
     >
         <div class="w-full h-full" v-html="avatarHtml" />
     </div>
@@ -10,9 +10,8 @@
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 
-// set base layers
+// set initial layers
 const store = useStore()
-
 store.commit('maker/setAvatarOptions', {
     Body: {
         class: "z-30",
