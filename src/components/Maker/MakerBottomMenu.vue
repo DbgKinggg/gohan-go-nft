@@ -39,18 +39,13 @@
                                 class="flex flex-row space-x-3 overflow-x-scroll p-3 justify-start"
                             >
                                 <div
-                                    class="aspect-square h-24 w-24 my-auto rounded-3xl p-1 bg-white/30 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
-                                >
-                                    <img
-                                        src="/images/maker/Layers/Body/body_no_face.png"
-                                        class="object-cover"
-                                    />
-                                </div>
-                                <div
                                     class="aspect-square h-24 w-24 my-auto rounded-3xl p-1 hover:bg-white/[0.12] focus:outline-none focus:ring-2 ring-offset-2 ring-offset-indigo-400 ring-white ring-opacity-60"
                                     v-for="item in layer.list"
                                     :key="item"
-                                    @click="changeTrait(layer.name, item)"
+                                    @click="changeTrait(layerName, item)"
+                                    :class="
+                                        item === avatarOptions?.[layerName]?.item ? 'bg-white/30' : ''
+                                    "
                                 >
                                     <img
                                         :src="`/images/maker/Layers/${layerName}/${item}.png`"
@@ -75,11 +70,12 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/vue/solid'
 import { LAYERS } from '../../utils/Maker/variables'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import { useStore } from 'vuex'
 
 export default {
     components: {
@@ -93,29 +89,32 @@ export default {
     },
     name: "Maker Right Side Drawer",
     setup() {
-        const isOpen = ref(true)
+        const store = useStore()
+        const isOpen = ref(!store.state.maker.showSideBar)
         const { t } = useI18n({ useScope: 'global' })
+        const avatarOptions = computed(() => store.state.maker.avatarOptions)
 
         const toggle = () => {
             isOpen.value = !isOpen.value
         }
 
-        const list = [
-            'test1',
-            'test2'
-        ]
-
         const changeTrait = (layer, itemName) => {
-            console.log(layer, itemName)
+            store.dispatch(
+                'maker/replaceAvatarOption',
+                {
+                    layer,
+                    itemName
+                }
+            )
         }
 
         return {
             isOpen,
             toggle,
             t,
-            list,
             LAYERS,
-            changeTrait
+            changeTrait,
+            avatarOptions
         }
     },
 }

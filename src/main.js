@@ -6,6 +6,7 @@ import VueLazyLoad from "vue3-lazyload";
 
 import router from "./router";
 import { i18n } from "vue-lang-router";
+import store from "./store";
 
 const app = createApp(App);
 app.directive("observe-visibility", {
@@ -17,4 +18,4 @@ app.directive("observe-visibility", {
   unmounted: ObserveVisibility.unbind,
 });
 
-app.use(VueLazyLoad).use(router).use(i18n).mount("#app");
+app.use(VueLazyLoad).use(router).use(i18n).use(store).mount("#app");

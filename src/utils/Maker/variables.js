@@ -7,12 +7,7 @@ export const LAYERS = {
   Body: {
     class: "z-30",
     name: "body",
-    list: ["body_no_face"],
-  },
-  FaceColor: {
-    class: "z-40",
-    name: "faceColor",
-    list: ["face_black", "face_normal"],
+    list: ["body"],
   },
   Face: {
     class: "z-50",
@@ -58,4 +53,8 @@ export const LAYERS = {
     name: "onHand",
     list: ["01", "02", "03", "04", "05", "06", "07"],
   },
+};
+
+export const SCREEN = {
+  lg: 1024,
 };

@@ -26,6 +26,7 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/solid'
+import { useStore } from 'vuex'
 
 export default {
     components: {
@@ -34,8 +35,9 @@ export default {
     },
     name: "Maker Right Side Drawer",
     setup() {
-        const isOpen = ref(false)
         const { t } = useI18n({ useScope: 'global' })
+        const store = useStore()
+        const isOpen = ref(store.state.maker.showSideBar)
 
         const toggle = () => {
             isOpen.value = !isOpen.value
@@ -44,7 +46,7 @@ export default {
         return {
             isOpen,
             toggle,
-            t
+            t,
         }
     },
 }
