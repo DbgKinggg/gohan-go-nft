@@ -84,3 +84,10 @@ export const BACKGROUNDS = [
   "bg-pink-400",
   "bg-rose-400",
 ];
+
+export const NOT_COMPATIBLE_AGENTS = [
+  "quark",
+  "micromessenger",
+  "weibo",
+  "douban",
+];

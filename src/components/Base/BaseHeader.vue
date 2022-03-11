@@ -44,7 +44,8 @@ export default {
     props: {
         showConnectWallet: {
             type: Boolean,
-            default: true
+            default: true,
+            required: false,
         }
     },
     setup() {

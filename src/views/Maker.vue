@@ -36,109 +36,93 @@
         </div>
         <MakerSideDrawer />
         <MakerBottomMenu />
+        <MakerDownloadModal
+            :is-modal-open="isModalOpen"
+            :preview-image-url="previewImageUrl"
+            @close="; (isModalOpen = false), (previewImageUrl = '')"
+        />
     </div>
 </template>
 
-<script>
+<script setup>
 import BaseSideDrawer from '../components/Base/BaseSideDrawer.vue'
 import MakerSideDrawer from '../components/Maker/MakerSideDrawer.vue'
 import MakerBottomMenu from '../components/Maker/MakerBottomMenu.vue'
 import MakerAvatarPreview from '../components/Maker/MakerAvatarPreview.vue'
 import BaseIconSpinner from '../components/Base/Icon/BaseIconSpinner.vue'
+import MakerDownloadModal from '../components/Maker/MakerDownloadModal.vue'
 import { ref } from 'vue'
-import { LAYERS, BACKGROUNDS } from '../utils/Maker/variables'
+import { LAYERS, BACKGROUNDS, NOT_COMPATIBLE_AGENTS } from '../utils/Maker/variables'
 import { SparklesIcon, DocumentDownloadIcon } from '@heroicons/vue/solid'
 import { useStore } from 'vuex'
 
-export default {
-    components: {
-        BaseSideDrawer,
-        MakerSideDrawer,
-        MakerBottomMenu,
-        MakerAvatarPreview,
-        BaseIconSpinner,
-        SparklesIcon,
-        DocumentDownloadIcon,
-    },
-    setup() {
-        const downloading = ref(false)
-        const avatarPreviewEle = ref(null)
-        const store = useStore()
 
-        async function downloadImg() {
-            try {
-                downloading.value = true
-                const avatarEle = avatarPreviewEle.value.$el
+const store = useStore()
+const downloading = ref(false)
+const avatarPreviewEle = ref(null)
+const isModalOpen = ref(false)
+const previewImageUrl = ref('')
 
-                // const userAgent = window.navigator.userAgent.toLowerCase()
-                // const notCompatible = NOT_COMPATIBLE_AGENTS.some(
-                //     (agent) => userAgent.indexOf(agent) !== -1
-                // )
+async function downloadImg() {
+    try {
+        downloading.value = true
+        const avatarEle = avatarPreviewEle.value.$el
 
-                const notCompatible = false
-                if (avatarEle) {
-                    const html2canvas = (await import('html2canvas')).default
-                    const canvas = await html2canvas(avatarEle, {
-                        backgroundColor: null,
-                    })
+        const userAgent = window.navigator.userAgent.toLowerCase()
+        const notCompatible = NOT_COMPATIBLE_AGENTS.some(
+            (agent) => userAgent.indexOf(agent) !== -1
+        )
 
-                    const dataURL = canvas.toDataURL()
+        if (avatarEle) {
+            const html2canvas = (await import('html2canvas')).default
+            const canvas = await html2canvas(avatarEle, {
+                backgroundColor: null,
+            })
 
-                    if (notCompatible) {
-                        imageDataURL.value = dataURL
-                        downloadModalVisible.value = true
-                    } else {
-                        const trigger = document.createElement('a')
-                        trigger.href = dataURL
-                        trigger.download = 'gohango-avatar.png'
-                        trigger.click()
-                    }
-                }
+            const dataURL = canvas.toDataURL()
 
-                // recordEvent('click_download', {
-                //     event_category: 'click',
-                // })
-            } finally {
-                setTimeout(() => {
-                    downloading.value = false
-                }, 500)
+            if (notCompatible) {
+                previewImageUrl.value = dataURL
+                isModalOpen.value = true
+            } else {
+                const trigger = document.createElement('a')
+                trigger.href = dataURL
+                trigger.download = 'gohango-avatar.png'
+                trigger.click()
             }
         }
+    } finally {
+        setTimeout(() => {
+            downloading.value = false
+        }, 500)
+    }
+}
 
-        const randomSelectItem = (items) => {
-            return items[items.length * Math.random() | 0]
+const randomSelectItem = (items) => {
+    return items[items.length * Math.random() | 0]
+}
+
+const randomizeAvatar = async () => {
+    let avatarOptions = {};
+    for (const layerName in LAYERS) {
+        const layer = LAYERS[layerName]
+        const list = layer.list
+
+        avatarOptions[layerName] = {
+            class: layer.class,
+            name: layer.name,
+            item: await randomSelectItem(list),
         }
+    }
 
-        const randomizeAvatar = async () => {
-            let avatarOptions = {};
-            for (const layerName in LAYERS) {
-                const layer = LAYERS[layerName]
-                const list = layer.list
+    store.commit(
+        'maker/setAvatarOptions',
+        avatarOptions
+    )
 
-                avatarOptions[layerName] = {
-                    class: layer.class,
-                    name: layer.name,
-                    item: await randomSelectItem(list),
-                }
-            }
-
-            store.commit(
-                'maker/setAvatarOptions',
-                avatarOptions
-            )
-
-            store.commit(
-                'maker/changeBackground',
-                randomSelectItem(BACKGROUNDS)
-            )
-        }
-
-        return {
-            downloadImg,
-            downloading,
-            avatarPreviewEle,
-            randomizeAvatar,
-        }
-    },
+    store.commit(
+        'maker/changeBackground',
+        randomSelectItem(BACKGROUNDS)
+    )
 }
 </script>
