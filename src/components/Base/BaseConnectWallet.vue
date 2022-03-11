@@ -6,7 +6,7 @@
     >{{ t('base.connectWallet') }}</button>
     <TransitionRoot appear :show="isOpen" as="template" v-if="showConnectWallet">
         <Dialog as="div" @close="closeModal">
-            <div class="fixed inset-0 z-50 overflow-y-auto">
+            <div class="fixed inset-0 z-[200] overflow-y-auto">
                 <div class="min-h-screen px-4 text-center">
                     <TransitionChild
                         as="template"
