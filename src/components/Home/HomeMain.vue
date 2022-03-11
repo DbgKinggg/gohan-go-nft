@@ -30,18 +30,20 @@
                         <div
                             class="text-xl xl:text-2xl mt-4 text-animation text-white"
                         >{{ t('home.main.description') }}</div>
-                        <div
-                            class="mt-3 md:mt-5 p-2 w-4/5 bg-nepal shadow-md items-center text-white rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
-                            role="alert"
-                        >
-                            <span
-                                class="flex rounded-full bg-blue-300 uppercase px-2 py-1 text-xs font-bold mr-3"
-                            >New</span>
-                            <span
-                                class="font-semibold mr-2 text-left flex-auto"
-                            >{{ t('home.main.tag') }}</span>
-                            <ChevronRightIcon class="h-5 w-5" />
-                        </div>
+                        <localized-link to="/maker">
+                            <div
+                                class="mt-3 md:mt-5 p-2 w-4/5 bg-nepal shadow-md items-center text-white rounded-full leading-none lg:rounded-full flex lg:inline-flex transform transition hover:translate-x-1"
+                                role="alert"
+                            >
+                                <span
+                                    class="flex rounded-full bg-blue-300 uppercase px-2 py-1 text-xs font-bold mr-3"
+                                >New</span>
+                                <span
+                                    class="font-semibold mr-2 text-left flex-auto"
+                                >{{ t('home.main.tag') }}</span>
+                                <ChevronRightIcon class="h-5 w-5" />
+                            </div>
+                        </localized-link>
                         <div class="mt-5 flex justify-center space-x-5">
                             <BaseIconTwitter />
                             <BaseIconDiscord />

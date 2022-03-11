@@ -2,7 +2,7 @@
   "home": {
     "main": {
       "description": "GohanGo!! 是一個Ethereum鏈上的隨機生成NFT系列。本系列的總數量為8866。每一個GohanGo!! NFT 都擁有其獨特的一套特征。我們的畫師把自己的文化以及生活中的故事作為靈感來源，精心設計每一個特征並仔細地手繪出所有作品。",
-      "tag": "敬請期待"
+      "tag": "全新的頭像製作器來啦！"
     },
     "backstories": "從前有只<span class=\"text-orange-300\">猴子</span>他很喜歡吃<span class=\"text-orange-300\">米飯</span>，他的願望是吃遍世界各地的飯，就像海南雞飯，咖喱飯，天婦羅蓋飯，芒果糯米飯，揚州炒飯，車站便當等等，但是他最喜歡的還是那一碗暖乎乎滴醬油淋白米飯。<br/><br/>如果你也是<span class=\"text-orange-300\">米飯黨</span>，快來加入我們吧！",
     "promo": [
@@ -105,9 +105,28 @@
     "warningMsg": "GohanGo!! NFT 公開發售時你將可以連接你的錢包並且鑄造你的NFT，感謝等待！！",
     "close": "關閉",
     "home": "首頁",
-    "maker": "頭像製作"
+    "maker": "頭像製作器"
   },
   "error": {
     "pageNotFound": "沒找到頁面喲"
+  },
+  "maker": {
+    "base": {
+      "randomize": "隨機",
+      "download": "下載",
+      "downloading": "下載中",
+      "close": "關閉",
+      "downloadMsg": "右鍵保存或者手機端長按保存"
+    },
+    "layers": {
+      "Background": "背景",
+      "Body": "身體",
+      "Face": "臉",
+      "Hairstyle": "頭髮",
+      "Hat": "帽子",
+      "Clothes": "衣服",
+      "Accessory": "配件",
+      "OnHand": "手持"
+    }
   }
 }
