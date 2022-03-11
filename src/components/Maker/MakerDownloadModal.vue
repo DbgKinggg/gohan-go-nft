@@ -37,7 +37,7 @@
                                 />
                                 <p
                                     class="text-sm text-gray-500 mx-auto mt-3"
-                                >Right click to download or long press to download on mobile</p>
+                                >{{ t('maker.base.downloadMsg') }}</p>
                             </div>
 
                             <div class="mt-4">
@@ -45,7 +45,7 @@
                                     type="button"
                                     class="inline-flex justify-center px-4 py-2 text-sm font-medium text-indigo-900 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
                                     @click="$emit('close')"
-                                >Close</button>
+                                >{{ t('maker.base.close') }}</button>
                             </div>
                         </div>
                     </TransitionChild>
@@ -64,7 +64,9 @@ import {
     DialogOverlay,
     DialogTitle,
 } from '@headlessui/vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps({
     isModalOpen: {
         type: Boolean,

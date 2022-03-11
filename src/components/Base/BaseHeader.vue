@@ -17,7 +17,7 @@
             </localized-link>
         </div>
         <div class="text-white text-xl hidden md:flex">
-            <div class="my-auto hover:text-nepal hover:-translate-y-0.5 transform transition">
+            <div class="my-auto hover:text-indigo-400 hover:-translate-y-0.5 transform transition">
                 <localized-link to="/maker">{{ t('base.maker') }}</localized-link>
             </div>
         </div>

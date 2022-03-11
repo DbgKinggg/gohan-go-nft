@@ -11,7 +11,7 @@
                         @click="randomizeAvatar"
                     >
                         <SparklesIcon class="w-5 h-5 mr-2 inline-block" />
-                        <span>Randomize</span>
+                        <span>{{ t('maker.base.randomize') }}</span>
                     </button>
                     <button
                         v-if="downloading"
@@ -20,7 +20,7 @@
                         disable
                     >
                         <BaseIconSpinner extraClasses="mr-2 inline-block text-white" />
-                        <span>Downloading</span>
+                        <span>{{ t('maker.base.downloading') }}</span>
                     </button>
                     <button
                         type="button"
@@ -29,7 +29,7 @@
                         v-else
                     >
                         <DocumentDownloadIcon class="w-5 h-5 mr-2 inline-block" />
-                        <span>Download</span>
+                        <span>{{ t('maker.base.download') }}</span>
                     </button>
                 </div>
             </div>
@@ -55,9 +55,11 @@ import { ref } from 'vue'
 import { LAYERS, BACKGROUNDS, NOT_COMPATIBLE_AGENTS } from '../utils/Maker/variables'
 import { SparklesIcon, DocumentDownloadIcon } from '@heroicons/vue/solid'
 import { useStore } from 'vuex'
+import { useI18n } from 'vue-i18n'
 
 
 const store = useStore()
+const { t } = useI18n({ useScope: 'global' })
 const downloading = ref(false)
 const avatarPreviewEle = ref(null)
 const isModalOpen = ref(false)
@@ -69,10 +71,11 @@ async function downloadImg() {
         const avatarEle = avatarPreviewEle.value.$el
 
         const userAgent = window.navigator.userAgent.toLowerCase()
-        const notCompatible = NOT_COMPATIBLE_AGENTS.some(
-            (agent) => userAgent.indexOf(agent) !== -1
-        )
+        // const notCompatible = NOT_COMPATIBLE_AGENTS.some(
+        //     (agent) => userAgent.indexOf(agent) !== -1
+        // )
 
+        const notCompatible = true
         if (avatarEle) {
             const html2canvas = (await import('html2canvas')).default
             const canvas = await html2canvas(avatarEle, {

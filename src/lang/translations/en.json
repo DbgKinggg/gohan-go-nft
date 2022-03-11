@@ -113,5 +113,24 @@
   },
   "error": {
     "pageNotFound": "This page could not be found"
+  },
+  "maker": {
+    "base": {
+      "randomize": "Randomize",
+      "download": "Download",
+      "downloading": "Downloading",
+      "close": "Close",
+      "downloadMsg": "Right click to download or long press to download on mobile"
+    },
+    "layers": {
+      "Background": "Background",
+      "Body": "Body",
+      "Face": "Face",
+      "Hairstyle": "Hairstyle",
+      "Hat": "Hat",
+      "Clothes": "Clothes",
+      "Accessory": "Accessory",
+      "OnHand": "OnHand"
+    }
   }
 }

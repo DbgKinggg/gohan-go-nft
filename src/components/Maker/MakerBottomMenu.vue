@@ -18,7 +18,7 @@
                                         ? 'bg-white shadow'
                                         : 'text-indigo-100 hover:bg-white/[0.12] hover:text-white',
                                 ]"
-                            >Background</button>
+                            >{{ t('maker.layers.Background') }}</button>
                         </Tab>
                         <Tab
                             v-for="layer in Object.keys(LAYERS)"
@@ -34,7 +34,7 @@
                                         ? 'bg-white shadow'
                                         : 'text-indigo-100 hover:bg-white/[0.12] hover:text-white',
                                 ]"
-                            >{{ layer }}</button>
+                            >{{ t('maker.layers.' + layer) }}</button>
                         </Tab>
                     </TabList>
 

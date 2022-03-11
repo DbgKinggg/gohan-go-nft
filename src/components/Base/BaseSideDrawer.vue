@@ -3,13 +3,13 @@
         <div
             v-if="isOpen"
             :class="isOpen ? 'bg-black opacity-25' : 'opacity-0'"
-            class="fixed top-0 left-0 h-screen w-screen z-50"
+            class="fixed top-0 left-0 h-screen w-screen z-[150]"
             @click="toggle()"
         ></div>
         <BaseHeader @toggle-menu="toggle" :showConnectWallet="showConnectWallet" />
         <nav
             :class="isOpen ? 'translate-x-0' : '-translate-x-[100%]'"
-            class="transition transform ease-out duration-300 w-64 fixed overflow-x-scroll bg-nepal top-0 h-screen z-50"
+            class="transition transform ease-out duration-300 w-64 fixed overflow-x-scroll bg-nepal top-0 h-screen z-[200]"
         >
             <div class="flex pr-2 justify-end">
                 <button @click="toggle()" class="p-2 text-white text-xl font-bold">&#9747;</button>
