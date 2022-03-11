@@ -2,9 +2,11 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./index.css";
 import { ObserveVisibility } from "vue-observe-visibility";
-import i18n from "./i18n";
-import { createAppRouter, defaultLocale } from "./router/index.js";
 import VueLazyLoad from "vue3-lazyload";
+
+import router from "./router";
+import { i18n } from "vue-lang-router";
+import store from "./store";
 
 const app = createApp(App);
 app.directive("observe-visibility", {
@@ -16,9 +18,4 @@ app.directive("observe-visibility", {
   unmounted: ObserveVisibility.unbind,
 });
 
-const $i18n = i18n(defaultLocale);
-
-app.use($i18n);
-app.use(createAppRouter($i18n));
-app.use(VueLazyLoad);
-app.mount("#app");
+app.use(VueLazyLoad).use(router).use(i18n).use(store).mount("#app");

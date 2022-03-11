@@ -60,6 +60,7 @@ import {
 import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
+import translations from '../../lang/translations'
 
 export default {
     components: {
@@ -71,22 +72,42 @@ export default {
         SelectorIcon
     },
     setup() {
-        const { locale } = useI18n({ useScope: 'global' })
+        const { locale, setLocaleMessage } = useI18n({ useScope: 'global' })
 
-        const languages = [
-            {
-                'name': 'English',
-                'value': 'en'
-            },
-            {
-                'name': '简体中文',
-                'value': 'zh_Hans'
-            },
-            {
-                'name': '繁體中文',
-                'value': 'zh_Hant'
+        // setup languages
+        const languages = []
+        for (const lang in translations) {
+            if (translations.hasOwnProperty(lang)) {
+                languages.push({
+                    name: translations[lang].name,
+                    value: lang
+                });
             }
-        ];
+        }
+
+        function setLanguage(lang) {
+            locale.value = lang
+
+            // set new url without reloading
+            const path = computed(() => route.path)
+            getNewUrl(path.value, lang)
+            return lang;
+        }
+
+        const loadLanguage = (lang) => {
+            if (!translations[lang] || typeof translations[lang].load !== 'function') {
+                console.error('Unable to load translations for "' + lang + '", "load" function is missing!')
+
+            }
+
+            return translations[lang].load().then(function (messages) {
+                setLocaleMessage(lang, messages.default || messages);
+
+                return setLanguage(lang);
+            }).catch(function (error) {
+                console.error('Failed to load "' + lang + '" translation.', error);
+            });
+        }
 
         const localeFoundIndex = languages.findIndex(language => language.value === locale.value)
         const selectedLanguage = ref(
@@ -97,13 +118,21 @@ export default {
 
         const route = useRoute();
 
-
+        // get the new url without reloading the page
         const getNewUrl = (rawUrl, locale) => {
-            const findIndex = rawUrl.indexOf("/", rawUrl.indexOf("/") + 1)
-            let newUrl = '/' + locale
+            // find all indices
+            const slashIndices = []
+            for (let i = 0; i < rawUrl.length; i++) {
+                if (rawUrl[i] == "/") {
+                    slashIndices.push(i)
+                }
+            }
 
-            if (findIndex !== -1) {
-                newUrl += rawUrl.substr(findIndex)
+            let newUrl = '/' + locale
+            if (slashIndices.length === 1) { // this is the default language
+                newUrl += rawUrl.substr(slashIndices[0])
+            } else if (slashIndices.length > 1) { // use the last index
+                newUrl += rawUrl.substr(slashIndices.pop())
             }
 
             history.pushState(
@@ -114,14 +143,10 @@ export default {
         }
 
 
-        watch(selectedLanguage, (newLocale) => {
+        watch(selectedLanguage, async (newLocale) => {
             // set locale
             if (newLocale.value) {
-                locale.value = newLocale.value
-
-                // set new url without reloading
-                const path = computed(() => route.path)
-                getNewUrl(path.value, newLocale.value)
+                loadLanguage(newLocale.value)
             }
         })
 

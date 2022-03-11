@@ -24,10 +24,22 @@
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
-    <url>
-      <loc>https://www.gohango.art/ja</loc>
-      <lastmod>2022-03-07T12:31:51+00:00</lastmod>
+   <url>
+      <loc>https://www.gohango.art/en/maker</loc>
+      <lastmod>2022-03-10T12:31:51+00:00</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.gohango.art/zh_Hans/maker</loc>
+      <lastmod>2022-03-10T12:31:51+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.gohango.art/zh_Hant/maker</loc>
+      <lastmod>2022-03-10T12:31:51+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
    </url>
 </urlset>

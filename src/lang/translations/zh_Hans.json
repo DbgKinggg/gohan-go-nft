@@ -1,8 +1,8 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! 是一个Ethereum链上的随机生成NFT系列。本系列的总数量为3333。每一个GohanGo!! NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
-      "tag": "敬请期待"
+      "description": "GohanGo!! 是一个Ethereum链上的随机生成NFT系列。本系列的总数量为8866。每一个GohanGo!! NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
+      "tag": "全新的头像制作器来啦！"
     },
     "backstories": "从前有只<span class=\"text-orange-300\">猴子</span>他很喜欢吃<span class=\"text-orange-300\">米饭</span>，他的愿望是吃遍世界各地的饭，就像海南鸡饭，咖喱饭，天妇罗盖饭，芒果糯米饭，扬州炒饭，车站便当等等，但是他最喜欢的还是那一碗暖乎乎滴酱油淋白米饭。<br/><br/>如果你也是<span class=\"text-orange-300\">米饭党</span>，快来加入我们吧！",
     "promo": [
@@ -103,6 +103,30 @@
     "connectWallet": "连接钱包",
     "warningTitle": "功能还没有上线",
     "warningMsg": "GohanGo!! NFT 公开发售时你将可以连接你的钱包并且铸造你的NFT，感谢等待！！",
-    "close": "关闭"
+    "close": "关闭",
+    "home": "首页",
+    "maker": "头像制作器"
+  },
+  "error": {
+    "pageNotFound": "没找到页面哟"
+  },
+  "maker": {
+    "base": {
+      "randomize": "随机",
+      "download": "下载",
+      "downloading": "下载中",
+      "close": "关闭",
+      "downloadMsg": "右键保存或者手机端长按保存"
+    },
+    "layers": {
+      "Background": "背景",
+      "Body": "身体",
+      "Face": "脸",
+      "Hairstyle": "头发",
+      "Hat": "帽子",
+      "Clothes": "衣服",
+      "Accessory": "配件",
+      "OnHand": "手持"
+    }
   }
 }

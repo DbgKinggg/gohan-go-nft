@@ -1,6 +1,7 @@
 {
   "name": "gohango",
   "version": "0.0.0",
+  "author": "DbgKing<dbgking@163.com> (https://gohango.art)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,11 +11,13 @@
     "@headlessui/vue": "^1.4.3",
     "@heroicons/vue": "^1.0.5",
     "gsap": "^3.9.1",
+    "html2canvas": "^1.4.1",
     "vue": "^3.2.25",
-    "vue-i18n": "^9.1.9",
+    "vue-lang-router": "^2.1.1",
     "vue-observe-visibility": "^1.0.0",
     "vue-router": "^4.0.12",
-    "vue3-lazyload": "^0.2.5-beta"
+    "vue3-lazyload": "^0.2.5-beta",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
