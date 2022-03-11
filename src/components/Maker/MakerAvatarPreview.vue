@@ -29,7 +29,7 @@ const avatarHtml = computed(() => {
     let html = ''
     for (const option in store.state.maker.avatarOptions) {
         const item = store.state.maker.avatarOptions[option];
-        html += `<img src="/images/maker/Layers/${option}/${item.item}.png" class="absolute inset-0 w-full ${item.class}" />`
+        html += `<img src="/images/maker/layers/${option}/${item.item}.png" class="absolute inset-0 w-full ${item.class}" />`
     }
     return html
 })
