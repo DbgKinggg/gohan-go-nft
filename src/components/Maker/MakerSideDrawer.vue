@@ -37,7 +37,7 @@
                             "
                         >
                             <img
-                                :src="`/images/maker/Layers/${layerName}/${item}.png`"
+                                :src="`/images/maker/layers/${layerName}/${item}.png`"
                                 class="object-cover"
                             />
                         </div>
