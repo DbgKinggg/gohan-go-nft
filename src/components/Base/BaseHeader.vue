@@ -1,6 +1,6 @@
 <template>
     <div
-        class="fixed top-5 w-full z-50 flex justify-between px-1 justify-items-center"
+        class="fixed top-5 w-full z-[250] flex justify-between px-1 justify-items-center"
         :class="{ 'invisible': !showNavbar }"
     >
         <button

@@ -78,7 +78,6 @@ export const BACKGROUNDS = [
   "bg-sky-400",
   "bg-blue-400",
   "bg-indigo-400",
-  "bg-violet-400",
   "bg-purple-400",
   "bg-fuchsia-400",
   "bg-pink-400",

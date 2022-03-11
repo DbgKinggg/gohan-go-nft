@@ -123,7 +123,7 @@ export default {
     setup() {
         const store = useStore()
         const isOpen = ref(!store.state.maker.showSideBar)
-        const { t } = useI18n({ useScope: 'global' })
+        const { t } = useI18n()
         const avatarOptions = computed(() => store.state.maker.avatarOptions)
 
         const toggle = () => {

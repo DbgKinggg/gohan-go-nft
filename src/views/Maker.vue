@@ -71,11 +71,10 @@ async function downloadImg() {
         const avatarEle = avatarPreviewEle.value.$el
 
         const userAgent = window.navigator.userAgent.toLowerCase()
-        // const notCompatible = NOT_COMPATIBLE_AGENTS.some(
-        //     (agent) => userAgent.indexOf(agent) !== -1
-        // )
+        const notCompatible = NOT_COMPATIBLE_AGENTS.some(
+            (agent) => userAgent.indexOf(agent) !== -1
+        )
 
-        const notCompatible = true
         if (avatarEle) {
             const html2canvas = (await import('html2canvas')).default
             const canvas = await html2canvas(avatarEle, {
