@@ -1,22 +1,23 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! 是一個Ethereum鏈上的隨機生成NFT系列。本系列的總數量為8866。每一個GohanGo!! NFT 都擁有其獨特的一套特征。我們的畫師把自己的文化以及生活中的故事作為靈感來源，精心設計每一個特征並仔細地手繪出所有作品。",
-      "tag": "全新的頭像製作器來啦！"
+      "description": "GohanGo!! 是一個Ethereum鏈上的隨機生成NFT繫列。本繫列的總數量爲3333。髮售將分爲預售和公售，預售總數量爲1234，全部免費鑄造！",
+      "description2": "每一個幹飯猴NFT 都擁有其獨特的一套特徵。我們的畫師把自己的文化以及生活中的故事作爲靈感來源，精心設計每一個特徵並仔細地手繪出所有作品。",
+      "tag": "所有幹飯猴部件已在頭像製作器開放！"
     },
-    "backstories": "從前有只<span class=\"text-orange-300\">猴子</span>他很喜歡吃<span class=\"text-orange-300\">米飯</span>，他的願望是吃遍世界各地的飯，就像海南雞飯，咖喱飯，天婦羅蓋飯，芒果糯米飯，揚州炒飯，車站便當等等，但是他最喜歡的還是那一碗暖乎乎滴醬油淋白米飯。<br/><br/>如果你也是<span class=\"text-orange-300\">米飯黨</span>，快來加入我們吧！",
+    "backstories": "從前有隻<span class=\"text-orange-300\">猴子</span>他很喜歡吃<span class=\"text-orange-300\">米飯</span>，他的願望是吃遍世界各地的飯，就像海南雞飯，咖喱飯，天婦羅蓋飯，芒果糯米飯，揚州炒飯，車站便當等等，但是他最喜歡的還是那一碗暖乎乎滴醬油淋白米飯。<br/><br/>如果你也是<span class=\"text-orange-300\">米飯黨</span>，快來加入我們吧！",
     "promo": [
       {
         "title": "獨具匠心的設計",
-        "description": "每一個NFT的靈感都來源於我們畫師的文化背景，每一個特征都由獨具匠心的設計以及精致的手繪組成。Gohan這只小猴子的創作靈感也來源於畫師自身的親身經歷。創作Gohan的初心是為了記錄生活中的美好記憶以及透過作品來治愈心靈。"
+        "description": "每一個NFT的靈感都來源於我們畫師的文化背景，每一個特徵都由獨具匠心的設計以及精緻的手繪組成。Gohan這隻小猴子的創作靈感也來源於畫師自身的親身經曆。創作Gohan的初心是爲了記錄生活中的美好記憶以及透過作品來治愈心靈。"
       },
       {
-        "title": "以社區為先",
-        "description": "以社區為本，持續建立並服務社區是我們的首要原則。我們的目標是打造一個在Ethereum鏈上最有趣並健康的社區。"
+        "title": "以社區爲先",
+        "description": "以社區爲本，持續建立並服務社區是我們的首要原則。我們的目標是打造一個在Ethereum鏈上最有趣並健康的社區。"
       },
       {
-        "title": "與眾不同",
-        "description": "我們並不希望僅作為一個單純的NFT項目，我們希望成為在Ethereum鏈上獨特的存在。此項目的一部分傭金將用於慈善捐贈，為的是幫助需要幫助的人。"
+        "title": "與衆不同",
+        "description": "我們並不希望僅作爲一個單純的NFT項目，我們希望成爲在Ethereum鏈上獨特的存在。此項目的一部分傭金將用於慈善捐贈，爲的是幫助需要幫助的人。"
       }
     ],
     "roadmap": {
@@ -30,7 +31,7 @@
             "官網上線",
             "官方Discord服務器與推特賬號啟用",
             "持續創作高質量手繪作品",
-            "開發NFT生成以及鑄造功能"
+            "隨機生成NFT和開發鑄造功能"
           ]
         },
         {
@@ -40,40 +41,67 @@
           "description": [
             "繼續發展壯大社區",
             "開發更多Discord功能：遊戲以及特別活動",
-            "空投和抽獎",
-            "一系列推廣活動"
+            "抽獎活動",
+            "與其他優質NFT項目合作",
+            "發佈NFT101 入門到放棄開源學習資料"
           ]
         },
         {
           "step": "Step 3",
           "title": "上線",
-          "headline": "獲得你的GohanGo!!",
-          "description": ["開放預售", "開放公售", "上線主要二手市場"]
+          "headline": "獲得你的Gohan",
+          "description": [
+            "白名單搜集與冩入",
+            "預售白名單鑄造",
+            "開放公售",
+            "銷毀活動（如未鑄造完）",
+            "開圖儀式",
+            "再來一碗！"
+          ]
         },
         {
           "step": "Step 4",
-          "title": "層出不窮",
-          "headline": "鋪天蓋地的活動即將到來",
+          "title": "水稻",
+          "headline": "組建水稻 (Dao)",
           "description": [
-            "持有者專屬福利以及活動",
-            "持有者專屬工具的開發（稀有度對照表，自建二手市場……）",
-            "捐贈活動",
-            "還有更多......"
+            "組建社區小金庫",
+            "電飯煲計劃",
+            "持有者專屬工具開發",
+            "持有者專屬福利與活動",
+            "捐贈活動：捐贈免費午餐",
+            "萌新計劃：我們將設立社區專屬NFT學習平台，引導更多萌新入圈"
+          ]
+        },
+        {
+          "step": "Step 5",
+          "title": "未來",
+          "headline": "未來計劃",
+          "extra": "根據鑄造和運營情況，我們將逐一實現以下計劃",
+          "description": [
+            "實體盲盒Gohan公仔",
+            "專屬週邊商店",
+            "與餐飲IP達成合作"
           ]
         }
-      ]
+      ],
+      "downloadPdf": "點擊我下載 - 路線圖與持有者權益.pdf",
+      "downloadPdfEn": "點擊我下載 - 路線圖與持有者權益（英文版）.pdf"
     },
     "team": {
       "name": "團隊",
+      "occupation": "本職",
       "members": [
         {
-          "role": "設計師"
+          "role": "設計師",
+          "occupation": "景觀設計師"
         },
         {
-          "role": "社區負責人"
+          "role": "社區負責人",
+          "occupation": "口譯員"
         },
         {
-          "role": "程序員"
+          "role": "程序員",
+          "occupation": "十八線程序猿"
         }
       ]
     },
@@ -81,34 +109,40 @@
       "name": "常見問答",
       "questions": [
         {
-          "question": "NFT發布時間、地點和方式是什麽？",
-          "answer": "我們計劃在3月23日於Ethereum鏈正式上線。只有通過官網才能進行鑄造哦！關註我們的推特賬戶和加入Discord服務器來獲取最新資訊吧！"
+          "question": "NFT發佈時間、地點和方式是什麼？",
+          "answer": "發售分爲預售與公售，我們將於Ethereum鏈上線。預售將在北京時間5月8號12:00pm（UTC+8）開始，公售將在北京時間5月9號12:00pm（UTC+8）開始。只有通過官網才能進行鑄造哦！關注我們的推特賬戶和加入Discord服務器來獲取最新資訊吧！"
         },
         {
-          "question": "為什麽我需要GohanGo!! NFT？",
-          "answer": "NFT的出現給予了眾多不知名畫師一個世界性平臺來分享他們心精手巧的作品。因此你獲得的不僅僅是一份圖片文件，而是一個由我們卓越的創作者繪製並隨機生成的獨具匠心的NFT。這些作品將在Ethereum鏈上上線。擁有GohanGo!! NFT 意味著你同時擁有了一張參與社區活動，抽獎活動，早鳥活動以及空投的門票。"
+          "question": "鑄造的費用是多少？",
+          "answer": "預售階段全部免費鑄造，公售階段價格爲0.02 ETH"
+        },
+        {
+          "question": "我要怎麼參與預售？",
+          "answer": "參與預售需要獲取白名單，可以參與我們推特官方的抽獎活動或者加入Discord服務器獲取詳細的獲取白名單規則"
+        },
+        {
+          "question": "爲什麼我需要GohanGo!! NFT？",
+          "answer": "NFT的出現給予了衆多不知名畫師一個世界性平台來分享他們心精手巧的作品。因此你獲得的不僅僅是一份圖片文件，而是一個由我們卓越的創作者繪製並隨機生成的獨具匠心的NFT。這些作品將在Ethereum鏈上上線。擁有GohanGo!! NFT 意味着你同時擁有了一張參與社區活動，抽獎活動，早鳥活動以及空投的門票。"
         },
         {
           "question": "我將獲得哪一個GohanGo!! NFT？",
-          "answer": "誰也不知道！無論優劣，所有NFT都是隨機分配的。好處是全部3333個NFT都是獨一無二的，每一個都是創作者別具匠心，巧妙構思的NFT。"
-        },
-        {
-          "question": "鑄造的費用是多少呢？",
-          "answer": "0.03 ETH"
+          "answer": "誰也不知道！無論優劣，所有NFT都是隨機分配的，我們沒有特別的定製款。"
         }
       ]
     }
   },
   "base": {
     "connectWallet": "連接錢包",
+    "disconnectWallet": "斷開連接",
     "warningTitle": "功能還沒有上線",
-    "warningMsg": "GohanGo!! NFT 公開發售時你將可以連接你的錢包並且鑄造你的NFT，感謝等待！！",
+    "warningMsg": "GohanGo!! NFT 公開髮售時你將可以連接你的錢包並且鑄造你的NFT，感謝等待！！",
     "close": "關閉",
     "home": "首頁",
-    "maker": "頭像製作器"
+    "maker": "頭像製作器",
+    "mint": "鑄造"
   },
   "error": {
-    "pageNotFound": "沒找到頁面喲"
+    "pageNotFound": "沒找到頁麵喲"
   },
   "maker": {
     "base": {
@@ -116,17 +150,56 @@
       "download": "下載",
       "downloading": "下載中",
       "close": "關閉",
-      "downloadMsg": "右鍵保存或者手機端長按保存"
+      "downloadMsg": "右鍵保存或者手機端長按保存",
+      "backupDownload": "如果下載按鈕沒反應就點我",
+      "connectWalletMessage": "如果你是幹飯猴的持有者，連接錢包即可使用所有幹飯猴NFT的部件~",
+      "notHolderMessage": "沒有在你的錢包發現乾飯猴的蹤影，你暫時只能使用預覽的部件"
     },
     "layers": {
       "Background": "背景",
       "Body": "身體",
-      "Face": "臉",
-      "Hairstyle": "頭髮",
-      "Hat": "帽子",
-      "Clothes": "衣服",
+      "Gohanmoji": "Gohanmoji",
+      "Hair": "頭髮",
+      "Earring": "耳環",
+      "Hat": "頭飾",
+      "Clothing": "衣服",
       "Accessory": "配件",
-      "OnHand": "手持"
+      "Right Hand": "手持"
+    }
+  },
+  "minter": {
+    "base": {
+      "presale": "預售",
+      "publicSale": "公開發售",
+      "presaleMintOut": "預售售罄",
+      "publicMintOut": "已售罄",
+      "mint": "鑄造",
+      "minted": "已鑄造",
+      "price": "價格:",
+      "free": "免費",
+      "presaleTime": "開始時間: 05.08 中午 12:00 PM （北京時間）",
+      "presaleDuration": "持續: 24 小时",
+      "publicTime": "開始時間: 05.09 中午 12:00 PM （北京時間）",
+      "isOver": "鑄造已結束"
+    },
+    "message": {
+      "connectWallet": "連接錢包查看可鑄造數量",
+      "notWhitelisted": "你不在白名單內",
+      "wlLimit": ["你可以在預售階段鑄造", "個幹飯猴 🍚"],
+      "publicLimit": ["你可以一次鑄造", "個幹飯猴 🍚"],
+      "submitted": "交易已提交，你可以點擊這裡查看：",
+      "txSubmitted": "已提交，可以到Opensea查看~"
+    },
+    "error": {
+      "connectWalletFirst": "請先連接錢包喲~",
+      "notPresaleTime": "現在還不是預售時間",
+      "notPublicTime": "現在還不是公售時間",
+      "presaleNotOpen": "預售還沒開啟，請稍後再試",
+      "publicNotOpen": "公售還沒開啟，請稍後再試",
+      "maxAmount": "你只能最多鑄造 {amount}",
+      "wlMintOut": "所有白名單已被領取",
+      "publicSoldOut": "已全部被鑄造完",
+      "exceedTotalSupply": "鑄造數量超過NFT總數"
     }
   }
 }

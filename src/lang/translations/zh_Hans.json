@@ -1,8 +1,9 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! 是一个Ethereum链上的随机生成NFT系列。本系列的总数量为8866。每一个GohanGo!! NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
-      "tag": "全新的头像制作器来啦！"
+      "description": "GohanGo!! 是一个Ethereum链上的随机生成NFT系列。本系列的总数量为3333。发售将分为预售和公售，预售总数量为1234，全部免费铸造！",
+      "description2": "每一个干饭猴NFT 都拥有其独特的一套特征。我们的画师把自己的文化以及生活中的故事作为灵感来源，精心设计每一个特征并仔细地手绘出所有作品。",
+      "tag": "所有干饭猴部件已在头像制作器开放！"
     },
     "backstories": "从前有只<span class=\"text-orange-300\">猴子</span>他很喜欢吃<span class=\"text-orange-300\">米饭</span>，他的愿望是吃遍世界各地的饭，就像海南鸡饭，咖喱饭，天妇罗盖饭，芒果糯米饭，扬州炒饭，车站便当等等，但是他最喜欢的还是那一碗暖乎乎滴酱油淋白米饭。<br/><br/>如果你也是<span class=\"text-orange-300\">米饭党</span>，快来加入我们吧！",
     "promo": [
@@ -30,7 +31,7 @@
             "官网上线",
             "官方Discord服务器与推特账号启用",
             "持续创作高质量手绘作品",
-            "开发NFT生成以及铸造功能"
+            "随机生成NFT和开发铸造功能"
           ]
         },
         {
@@ -40,40 +41,67 @@
           "description": [
             "继续发展壮大社区",
             "开发更多Discord功能：游戏以及特别活动",
-            "空投和抽奖",
-            "一系列推广活动"
+            "抽奖活动",
+            "与其他优质NFT项目合作",
+            "发布NFT101 入门到放弃开源学习资料"
           ]
         },
         {
           "step": "Step 3",
           "title": "上线",
-          "headline": "获得你的GohanGo!!",
-          "description": ["开放预售", "开放公售", "上线主要二手市场"]
+          "headline": "获得你的Gohan",
+          "description": [
+            "白名单搜集与写入",
+            "预售白名单铸造",
+            "开放公售",
+            "销毁活动（如未铸造完）",
+            "开图仪式",
+            "再来一碗！"
+          ]
         },
         {
           "step": "Step 4",
-          "title": "层出不穷",
-          "headline": "铺天盖地的活动即将到来",
+          "title": "水稻",
+          "headline": "组建水稻 (Dao)",
           "description": [
-            "持有者专属福利以及活动",
-            "持有者专属工具的开发（稀有度对照表，自建二手市场……）",
-            "捐赠活动",
-            "还有更多......"
+            "组建社区小金库",
+            "电饭煲计划",
+            "持有者专属工具开发",
+            "持有者专属福利与活动",
+            "捐赠活动：捐赠免费午餐",
+            "萌新计划：我们将设立社区专属NFT学习平台，引导更多萌新入圈"
+          ]
+        },
+        {
+          "step": "Step 5",
+          "title": "未来",
+          "headline": "未来计划",
+          "extra": "根据铸造和运营情况，我们将逐一实现以下计划",
+          "description": [
+            "实体盲盒Gohan公仔",
+            "专属周边商店",
+            "与餐饮IP达成合作"
           ]
         }
-      ]
+      ],
+      "downloadPdf": "点击我下载 - 路线图与持有者权益.pdf",
+      "downloadPdfEn": "点击我下载 - 路线图与持有者权益（英文版）.pdf"
     },
     "team": {
       "name": "团队",
+      "occupation": "本职",
       "members": [
         {
-          "role": "设计师"
+          "role": "设计师",
+          "occupation": "景观设计师"
         },
         {
-          "role": "社区负责人"
+          "role": "社区负责人",
+          "occupation": "口译员"
         },
         {
-          "role": "程序员"
+          "role": "程序员",
+          "occupation": "十八线程序员"
         }
       ]
     },
@@ -82,7 +110,15 @@
       "questions": [
         {
           "question": "NFT发布时间、地点和方式是什么？",
-          "answer": "我们计划在3月23日于Ethereum链正式上线。只有通过官网才能进行铸造哦！关注我们的推特账户和加入Discord服务器来获取最新资讯吧！"
+          "answer": "发售分为预售与公售，我们将于Ethereum链上线。预售将在北京时间5月8号12:00pm（UTC+8）开始，公售将在北京时间5月9号12:00pm（UTC+8）开始。只有通过官网才能进行铸造哦！关注我们的推特账户和加入Discord服务器来获取最新资讯吧！"
+        },
+        {
+          "question": "铸造的费用是多少？",
+          "answer": "预售阶段全部免费铸造，公售阶段价格为0.02 ETH"
+        },
+        {
+          "question": "我要怎么参与预售？",
+          "answer": "参与预售需要获取白名单，可以参与我们推特官方的抽奖活动或者加入Discord服务器获取详细的获取白名单规则"
         },
         {
           "question": "为什么我需要GohanGo!! NFT？",
@@ -90,22 +126,20 @@
         },
         {
           "question": "我将获得哪一个GohanGo!! NFT？",
-          "answer": "谁也不知道！无论优劣，所有NFT都是随机分配的。好处是全部3333个NFT都是独一无二的，每一个都是创作者别具匠心，巧妙构思的NFT。"
-        },
-        {
-          "question": "铸造的费用是多少呢？",
-          "answer": "0.03 ETH"
+          "answer": "谁也不知道！无论优劣，所有NFT都是随机分配的，我们没有特别的定制款。"
         }
       ]
     }
   },
   "base": {
     "connectWallet": "连接钱包",
+    "disconnectWallet": "断开连接",
     "warningTitle": "功能还没有上线",
     "warningMsg": "GohanGo!! NFT 公开发售时你将可以连接你的钱包并且铸造你的NFT，感谢等待！！",
     "close": "关闭",
     "home": "首页",
-    "maker": "头像制作器"
+    "maker": "头像制作器",
+    "mint": "铸造"
   },
   "error": {
     "pageNotFound": "没找到页面哟"
@@ -116,17 +150,56 @@
       "download": "下载",
       "downloading": "下载中",
       "close": "关闭",
-      "downloadMsg": "右键保存或者手机端长按保存"
+      "downloadMsg": "右键保存或者手机端长按保存",
+      "backupDownload": "如果下载按钮没反应就点我",
+      "connectWalletMessage": "如果你是干饭猴的持有者，连接你的钱包即可使用所有干饭猴NFT部件~",
+      "notHolderMessage": "没有在你的钱包发现干饭猴的踪影，你暂时只能使用预览的部件"
     },
     "layers": {
       "Background": "背景",
       "Body": "身体",
-      "Face": "脸",
-      "Hairstyle": "头发",
-      "Hat": "帽子",
-      "Clothes": "衣服",
+      "Gohanmoji": "Gohanmoji",
+      "Hair": "头发",
+      "Earring": "耳环",
+      "Hat": "头饰",
+      "Clothing": "衣服",
       "Accessory": "配件",
-      "OnHand": "手持"
+      "Right Hand": "手持"
+    }
+  },
+  "minter": {
+    "base": {
+      "presale": "预售",
+      "publicSale": "公开發售",
+      "presaleMintOut": "预售售罄",
+      "publicMintOut": "已售罄",
+      "mint": "铸造",
+      "minted": "已铸造",
+      "price": "价格:",
+      "free": "免费",
+      "presaleTime": "开始时间: 05.08 中午 12:00 PM （北京时间）",
+      "presaleDuration": "持续: 24 小时",
+      "publicTime": "开始时间: 05.09 中午 12:00 PM （北京时间）",
+      "isOver": "铸造已结束"
+    },
+    "message": {
+      "connectWallet": "连接钱包查看可铸造数量",
+      "notWhitelisted": "你不在白名单内",
+      "wlLimit": ["你可以在预售阶段铸造", "个干饭猴 🍚"],
+      "publicLimit": ["你可以一次铸造", "个干饭猴 🍚"],
+      "submitted": "交易已提交，你可以点击这里查看：",
+      "txSubmitted": "已提交，可以到Opensea查看~"
+    },
+    "error": {
+      "connectWalletFirst": "请先连接钱包哟~",
+      "notPresaleTime": "现在还不是预售时间",
+      "notPublicTime": "现在还不是公售时间",
+      "presaleNotOpen": "预售还没开启，请稍后再试",
+      "publicNotOpen": "公售还没开启，请稍后再试",
+      "maxAmount": "你只能最多铸造 {amount}",
+      "wlMintOut": "所有白名单已被领取",
+      "publicSoldOut": "已全部被铸造完",
+      "exceedTotalSupply": "铸造数量超过NFT总数"
     }
   }
 }

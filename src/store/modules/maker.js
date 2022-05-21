@@ -1,9 +1,18 @@
 import { SCREEN, LAYERS } from "../../utils/Maker/variables";
 
+const getFreeLayers = () => {
+  const layers = structuredClone(LAYERS);
+  Object.keys(layers).forEach((layer) => {
+    layers[layer].list = layers[layer].list.slice(0, 5);
+  });
+
+  return layers;
+};
+
 const state = {
   avatarOptions: [],
-  background: "bg-white", // default white
   showSideBar: window.innerWidth > SCREEN.lg,
+  layers: getFreeLayers(),
 };
 
 const mutations = {
@@ -16,8 +25,8 @@ const mutations = {
   removeLayer(state, layer) {
     delete state.avatarOptions[layer];
   },
-  changeBackground(state, color) {
-    state.background = color;
+  getAllLayers(state) {
+    state.layers = LAYERS;
   },
 };
 

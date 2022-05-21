@@ -1,6 +1,7 @@
 import Home from "../views/Home.vue";
 import Maker from "../views/Maker.vue";
 import NotFound from "../views/NotFound.vue";
+import Minter from "../views/Minter.vue";
 import { createWebHistory } from "vue-router";
 import { createLangRouter } from "vue-lang-router";
 import translations from "../lang/translations";
@@ -15,6 +16,11 @@ const routes = [
     path: "/maker",
     name: "maker",
     component: Maker,
+  },
+  {
+    path: "/mint",
+    name: "mint",
+    component: Minter,
   },
   {
     path: "/:catchAll(.*)",

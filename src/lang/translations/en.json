@@ -1,8 +1,9 @@
 {
   "home": {
     "main": {
-      "description": "GohanGo!! is a collection of 8,866 algorithmically generated NFTs living on the Ethereum blockchain. Every GohanGo!! NFT features a different set of unique attributes. Every attribute is designed and is meticulously hand-drawn by our Artist inspired by their own culture and stories.",
-      "tag": "Avatar Maker is here!"
+      "description": "GohanGo!! is a collection of 3,333 algorithmically generated NFTs living on the Ethereum blockchain. There will be 1,234 of them in the presale phase, and all of them are FREE  MINT.",
+      "description2": "Every GohanGo!! NFT features a different set of unique attributes. Every attribute is designed and is meticulously hand-drawn by our Artist inspired by their own culture and stories.",
+      "tag": "All GohanGo!! traits available in the maker!"
     },
     "backstories": "Once upon a time, there is a monkey named <span class=\"text-orange-300\">Gohan</span>. He loves rice, all kinds of rice! His <span class=\"text-orange-300\">dream</span> is to try out all the <span class=\"text-orange-300\">rice dishes</span> across the world.<br/><br/>Hainanese Chicken Rice, Curry Rice, Tempura Don, Risotto, Mango Sticky Rice, Golden Fried Rice, Ekiben. You name it, he had it on his <span class=\"text-orange-300\">bucket list</span>! But what he most in love with is the warm bowl of soy sauce drizzled white rice. <br/><br/>If you are a rice people, join <span class=\"text-orange-300\">GohanGo!!</span>",
     "promo": [
@@ -30,7 +31,7 @@
             "Release the official website",
             "Launch the official Discord server and Twitter account",
             "Continue to create high quality hand-drawn artwork",
-            "Develop functionality for NFT creation and minting"
+            "Generate NFT and develop functionality for NFT minting"
           ]
         },
         {
@@ -40,8 +41,9 @@
           "description": [
             "Continue to develop and expand our community",
             "More Discord functionality building: incoming games and special events",
-            "Airdrops and giveaways",
-            "Ongoing marketing campaigns"
+            "Giveaway events",
+            "Collab with other awesome NFT projects",
+            "Publish NFT101 open source learning material"
           ]
         },
         {
@@ -49,35 +51,56 @@
           "title": "Live",
           "headline": "Get your GohanGo!!",
           "description": [
+            "Whitelist addresses gathering",
             "Pre-sale live",
             "Public sale live",
-            "Integration with major secondary market"
+            "Burn (if not mint out)",
+            "Reveal",
+            "Another bowl event"
           ]
         },
         {
           "step": "Step 4",
-          "title": "More",
-          "headline": "More and more to come",
+          "title": "DAO",
+          "headline": "Start Rice DAO",
           "description": [
-            "Holders exclusive benefits and events",
-            "Holders exclusive tools building (Rarity chart, marketplace...)",
-            "Donations",
-            "and more"
+            "Community vault",
+            "Rice Cooker Initiative ",
+            "Develop holders exclusive tools",
+            "Holder exclusive benefits & event",
+            "Charity: Free Lunch for Children",
+            "Freshman Program: Build NFT learning platform to guide more NFT freshmen"
+          ]
+        },
+        {
+          "step": "Step 5",
+          "title": "Plans",
+          "headline": "Future Plans",
+          "extra": "Depending on the mint and operation, following plans will be realized one by one:",
+          "description": [
+            "Physical Gohan figure mystery box",
+            "Exclusive merch store",
+            "Collab with restaurants"
           ]
         }
-      ]
+      ],
+      "downloadPdfEn": "Click to download - Roadmap & Holder Benefits.pdf"
     },
     "team": {
       "name": "Team",
+      "occupation": "Occupation",
       "members": [
         {
-          "role": "Artist"
+          "role": "Artist",
+          "occupation": "Landscape Architect"
         },
         {
-          "role": "Community Manager"
+          "role": "Community Manager",
+          "occupation": "Interpreter"
         },
         {
-          "role": "Developer"
+          "role": "Developer",
+          "occupation": "Full Stack Developer"
         }
       ]
     },
@@ -86,30 +109,36 @@
       "questions": [
         {
           "question": "Wen, how and where?",
-          "answer": "We are scheduled to go live with our NFT project on March 23th on the Ethereum blockchain. You will only be able to MINT them on our official website. Please follow our Twitter account and join our Discord server to get the latest updates from us!"
+          "answer": "There will be a presale and a public sale phase. Pre-sale will start on May 8th at 04:00 PM (UTC). Public sale will start on May 9th at 04:00 PM (UTC). You will only be able to MINT them on our official website. Please follow our Twitter account and join our Discord server to get the latest updates from us!"
         },
         {
-          "question": "Why should I but GohanGo!! NFT?",
+          "question": "How much is the mint?",
+          "answer": "There will be 1,234 Gohans to be MINTED FOR FREE in the presale phase, and the public sale price is 0.02 ETH."
+        },
+        {
+          "question": "How can I participate in the pre-sale?",
+          "answer": "You will need to be whitelisted in order to participate, you can follow our official Twitter account for giveaway events or join our Discord server to find out more about the rules."
+        },
+        {
+          "question": "Why should I buy GohanGo!! NFT?",
           "answer": "The emergence of NFTs offers an opportunity for unknown artist to share their aesthetic pieces to the whole world! So you are not only just getting a piece of JPEG, you are getting a unique NFT that was hand-drawn and randomly assembled by our talented artist. They are all living on the Ethereum blockchain, owning one of the GohanGo!! NFTs means you get access to community-wide events, giveaways and early access to any further generations and drops."
         },
         {
           "question": "Which GohanGo!! NFT will I get?",
           "answer": "No one knows! They will all be distributed randomly, whether good or bad. The good thing is all the 3,333 NFTs are unique, they all look pretty and special!"
-        },
-        {
-          "question": "How much will the mint cost?",
-          "answer": "0.03 ETH"
         }
       ]
     }
   },
   "base": {
-    "connectWallet": "Connect Wallet Soon",
+    "connectWallet": "Connect Wallet",
+    "disconnectWallet": "Disconnect",
     "warningTitle": "Please come back later",
     "warningMsg": "You will be able to connect your wallet and mint your GohanGo!! NFT when mint is live, thanks!",
     "close": "Close",
     "home": "Home",
-    "maker": "Avatar Maker"
+    "maker": "Avatar Maker",
+    "mint": "Mint"
   },
   "error": {
     "pageNotFound": "This page could not be found"
@@ -120,17 +149,56 @@
       "download": "Download",
       "downloading": "Downloading",
       "close": "Close",
-      "downloadMsg": "Right click to download or long press to download on mobile"
+      "downloadMsg": "Right click to download or long press to download on mobile",
+      "backupDownload": "Click me if the download button doesn't work",
+      "connectWalletMessage": "If you are a Gohan holder, connect wallet to get access to all the traits",
+      "notHolderMessage": "We can't find any Gohan in your wallet, you can only use the preview traits"
     },
     "layers": {
       "Background": "Background",
       "Body": "Body",
-      "Face": "Face",
-      "Hairstyle": "Hairstyle",
+      "Gohanmoji": "Gohanmoji",
+      "Hair": "Hair",
+      "Earring": "Earring",
       "Hat": "Hat",
-      "Clothes": "Clothes",
+      "Clothing": "Clothing",
       "Accessory": "Accessory",
-      "OnHand": "OnHand"
+      "Right Hand": "Right Hand"
+    }
+  },
+  "minter": {
+    "base": {
+      "presale": "Presale Phase",
+      "publicSale": "Public Sale Phase",
+      "presaleMintOut": "Presale All Mint Out",
+      "publicMintOut": "All Mint Out",
+      "mint": "Mint",
+      "minted": "Minted",
+      "price": "Price:",
+      "free": "free",
+      "presaleTime": "Start at: 05.08 12:00 UTC+8",
+      "presaleDuration": "Duration: 24 hours",
+      "publicTime": "Start at: 05.09 12:00 UTC+8",
+      "isOver": "Mint is over"
+    },
+    "message": {
+      "connectWallet": "Please connect wallet to check your mintable amount",
+      "notWhitelisted": "You are not whitelisted",
+      "wlLimit": ["You can mint", "Gohans 🍚 max in the presale phase"],
+      "publicLimit": ["You can mint", "Gohans 🍚 max per transaction"],
+      "submitted": "Transaction submitted, you can check it here:",
+      "txSubmitted": "Transaction submitted, please check on Opensea"
+    },
+    "error": {
+      "connectWalletFirst": "Please connect wallet first",
+      "notPresaleTime": "You can not mint in presale anymore",
+      "notPublicTime": "You can not mint in public sale yet",
+      "presaleNotOpen": "Presale is not open yet, please try again later",
+      "publicNotOpen": "Public sale is not open yet, please try again later",
+      "maxAmount": "You can only mint {amount} max",
+      "wlMintOut": "All whitelist are minted out",
+      "publicSoldOut": "All Gohans sold out",
+      "exceedTotalSupply": "Mint amount exceeded total supply"
     }
   }
 }

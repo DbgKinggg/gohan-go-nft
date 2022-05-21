@@ -1,103 +1,84 @@
 <template>
-    <button
-        @click="openModal"
-        class="p-3 shadow-md text-sm md:text-base text-black bg-white hover:bg-gray-200 active:bg-gray-300 rounded-3xl hover:-translate-y-0.5 transform transition focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:outline-none focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500"
-        type="button"
-    >{{ t('base.connectWallet') }}</button>
-    <TransitionRoot appear :show="isOpen" as="template" v-if="showConnectWallet">
-        <Dialog as="div" @close="closeModal">
-            <div class="fixed inset-0 z-[200] overflow-y-auto">
-                <div class="min-h-screen px-4 text-center">
-                    <TransitionChild
-                        as="template"
-                        enter="duration-300 ease-out"
-                        enter-from="opacity-0"
-                        enter-to="opacity-100"
-                        leave="duration-200 ease-in"
-                        leave-from="opacity-100"
-                        leave-to="opacity-0"
-                    >
-                        <DialogOverlay class="fixed inset-0 bg-black opacity-30" />
-                    </TransitionChild>
-
-                    <span class="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
-
-                    <TransitionChild
-                        as="template"
-                        enter="duration-300 ease-out"
-                        enter-from="opacity-0 scale-95"
-                        enter-to="opacity-100 scale-100"
-                        leave="duration-200 ease-in"
-                        leave-from="opacity-100 scale-100"
-                        leave-to="opacity-0 scale-95"
-                    >
-                        <div
-                            class="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-3xl"
-                        >
-                            <DialogTitle
-                                as="h3"
-                                class="text-lg font-medium leading-6 text-gray-900"
-                            >{{ t('base.warningTitle') }}</DialogTitle>
-                            <div class="mt-2">
-                                <p class="text-sm text-gray-500">{{ t('base.warningMsg') }}</p>
-                            </div>
-
-                            <div class="mt-4">
-                                <button
-                                    type="button"
-                                    class="inline-flex justify-center px-4 py-2 text-sm font-medium text-indigo-900 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
-                                    @click="closeModal"
-                                >{{ t('base.close') }}</button>
-                            </div>
-                        </div>
-                    </TransitionChild>
-                </div>
-            </div>
-        </Dialog>
-    </TransitionRoot>
+  <button
+    @click="connectWallet"
+    class="
+      p-3
+      text-sm
+      md:text-base
+      bg-indigo-500
+      hover:bg-indigo-400
+      text-white
+      shadow-xl
+      rounded-3xl
+      hover:-translate-y-0.5
+      transform
+      transition
+      focus:ring-2 focus:ring-offset-2 focus:ring-orange-300
+      focus-visible:ring-2
+      focus-visible:ring-opacity-75
+      focus-visible:outline-none
+      focus-visible:ring-orange-300
+      focus-visible:ring-offset-2
+      focus-visible:border-indigo-500
+    "
+    type="button"
+    v-if="!signer"
+  >
+    {{ t("base.connectWallet") }}
+  </button>
+  <button
+    @click="disconnectWallet"
+    class="
+      p-3
+      shadow-md
+      text-sm
+      md:text-base
+      text-black
+      bg-red-100
+      hover:bg-red-200
+      active:bg-red-300
+      rounded-3xl
+      hover:-translate-y-0.5
+      transform
+      transition
+      focus:ring-2 focus:ring-offset-2 focus:ring-orange-300
+      focus-visible:ring-2
+      focus-visible:ring-opacity-75
+      focus-visible:outline-none
+      focus-visible:ring-orange-300
+      focus-visible:ring-offset-2
+      focus-visible:border-indigo-500
+    "
+    type="button"
+    v-else
+  >
+    {{ t("base.disconnectWallet") }}
+  </button>
 </template>
 
-<script>
-import { ref } from 'vue'
-import {
-    TransitionRoot,
-    TransitionChild,
-    Dialog,
-    DialogOverlay,
-    DialogTitle,
-} from '@headlessui/vue'
-import { useI18n } from 'vue-i18n'
+<script setup>
+import { defineProps, computed } from "vue";
+import { useI18n } from "vue-i18n";
+import { useStore } from "vuex";
 
-export default {
-    components: {
-        TransitionRoot,
-        TransitionChild,
-        Dialog,
-        DialogOverlay,
-        DialogTitle,
-    },
-    props: {
-        showConnectWallet: {
-            type: Boolean,
-            default: true,
-            required: false,
-        }
-    },
-    setup() {
-        const { t } = useI18n({ useScope: 'global' })
+const store = useStore();
+const signer = computed(() => store.state.wallet.signer);
 
-        const isOpen = ref(false)
+defineProps({
+  showConnectWallet: {
+    type: Boolean,
+    default: true,
+    required: false,
+  },
+});
 
-        return {
-            isOpen,
-            closeModal() {
-                isOpen.value = false
-            },
-            openModal() {
-                isOpen.value = true
-            },
-            t,
-        }
-    }
-}
+const { t } = useI18n({ useScope: "global" });
+
+const connectWallet = async () => {
+  await store.dispatch("wallet/connect");
+};
+
+const disconnectWallet = async () => {
+  await store.dispatch("wallet/disconnect");
+};
 </script>

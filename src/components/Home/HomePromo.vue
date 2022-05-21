@@ -10,7 +10,7 @@
         </HomePromoItem>
         <img
             id="rice-example-1"
-            v-lazy="{ src: '/images/bibimbap.png' }"
+            src="/images/bibimbap.png"
             alt="Bibimbap"
             class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
         />
@@ -23,7 +23,7 @@
             <template v-slot:description>{{ t('home.promo.1.description') }}</template>
         </HomePromoItem>
         <img
-            v-lazy="{ src: '/images/hainanese_chicken.png' }"
+            src="/images/hainanese_chicken.png"
             id="rice-example-2"
             alt="Hainanese Chicken"
             class="w-28 mt-5 mr-10 mb-0 md:w-48 md:mr-2 ml-auto"
@@ -38,7 +38,7 @@
         </HomePromoItem>
         <img
             id="rice-example-3"
-            v-lazy="{ src: '/images/bento.png' }"
+            src="/images/bento.png"
             alt="Bento"
             class="w-28 mt-5 ml-10 mb-0 md:w-48 md:ml-2"
         />

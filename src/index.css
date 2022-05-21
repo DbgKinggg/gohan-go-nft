@@ -13,3 +13,7 @@
 body {
   font-family: KNFontMaiYuan, Arial, Helvetica, sans-serif;
 }
+
+.custom_font {
+  font-family: KNFontMaiYuan, Arial, Helvetica, sans-serif !important;
+}

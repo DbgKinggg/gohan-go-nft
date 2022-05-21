@@ -16,6 +16,7 @@ The website and avatar maker are inspired by some awesome projects out there, I 
 Find us:
 
 - [Twitter](https://twitter.com/GohanGoNFT)
+- [My Twitter](https://twitter.com/DbgKinggg)
 - [Discord](discord.gg/GSgmWYQUPD)
 
 ---
@@ -23,6 +24,10 @@ Find us:
 ## ✔️ What's included in this repo
 
 - The home page of our official website (https://gohango.art/)
+- A Minting Dapp (https://gohango.art/Minter)
+  - ability check if whitelisted or not
+  - whitelist sale
+  - public sale
 - An avatar maker (https://gohango.art/maker)
 - Build-in locale support (with localized url)
 
@@ -31,11 +36,13 @@ Find us:
 - Vue 3 + Vuex
 - Tailwind CSS + HeadlessUI + HeroIcons
 - Gsap (For simple animation)
+- Ether.js (To interact with smart contract)
 - Vue i18n (Multiple locale support)
 
-## 📅 Upcoming
+## Get started
 
-After our public mint has been conducted, we will open-source everything that is related to our NFT project, including:
-
-- Smart Contract for our NFT
-- Minting DAPP
+- Git clone repo
+- Copy `.env.example` file and rename to `.env`
+- Fill in env environment like Infura ID, chain ID, smart contract address and the scan url
+- Run development server by running `npm run dev`
+- Enjoy

@@ -3,6 +3,8 @@ import App from "./App.vue";
 import "./index.css";
 import { ObserveVisibility } from "vue-observe-visibility";
 import VueLazyLoad from "vue3-lazyload";
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
 
 import router from "./router";
 import { i18n } from "vue-lang-router";
@@ -18,4 +20,10 @@ app.directive("observe-visibility", {
   unmounted: ObserveVisibility.unbind,
 });
 
-app.use(VueLazyLoad).use(router).use(i18n).use(store).mount("#app");
+app
+  .use(VueLazyLoad)
+  .use(router)
+  .use(i18n)
+  .use(store)
+  .use(Toast, {})
+  .mount("#app");

@@ -7,6 +7,7 @@ module.exports = {
         "river-bed": "#40485b",
         violet: "#0a0d34",
         nepal: "#8babc2",
+        "os-blue": "#2081e2",
       },
     },
   },
